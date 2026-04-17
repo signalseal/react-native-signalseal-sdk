@@ -151,15 +151,6 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
     }
 
     @ReactMethod
-    fun getIdfv(promise: Promise) {
-        // There is no IDFV on Android — the TS facade resolves to null
-        // before crossing the bridge; this method is registered solely
-        // so a direct NativeModules call from JS doesn't throw
-        // "method not found".
-        promise.resolve(null)
-    }
-
-    @ReactMethod
     fun getAttributionParams(promise: Promise) {
         try {
             val map = SignalSealAttributionSdk.getAttributionParams()

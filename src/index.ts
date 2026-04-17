@@ -187,20 +187,6 @@ export const SignalSealAttributionSdk = {
   },
 
   /**
-   * iOS-only. Returns the `identifierForVendor` UUID. On Android, the
-   * native bridge resolves with `null` (there's no equivalent — the
-   * closest is ANDROID_ID, which we don't expose by design).
-   */
-  async getIdfv(): Promise<string | null> {
-    if (Platform.OS !== 'ios') return null;
-    try {
-      return await NativeSignalSeal.getIdfv();
-    } catch (err) {
-      throw SignalSealError.from(err);
-    }
-  },
-
-  /**
    * Returns the current attribution parameters (deeplink id, gclid,
    * utm_* values, etc.) or `null` if no match has resolved yet. On iOS
    * this awaits an internal attribution gate (bounded by the match

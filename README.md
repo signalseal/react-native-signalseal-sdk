@@ -55,7 +55,6 @@ const attribution = await SignalSealAttributionSdk.getAttributionParams();
 | `setUserAttributes(attrs)` | `void` | iOS, Android |
 | `flush()` | `Promise<void>` | iOS, Android |
 | `getSignalSealId()` | `Promise<string \| null>` | iOS, Android |
-| `getIdfv()` | `Promise<string \| null>` | iOS only (Android returns `null`) |
 | `getAttributionParams()` | `Promise<Record<string, string> \| null>` | iOS, Android |
 | `isSdkDisabled()` | `Promise<boolean>` | iOS, Android |
 | `deleteUserData()` | `Promise<void>` | iOS, Android |

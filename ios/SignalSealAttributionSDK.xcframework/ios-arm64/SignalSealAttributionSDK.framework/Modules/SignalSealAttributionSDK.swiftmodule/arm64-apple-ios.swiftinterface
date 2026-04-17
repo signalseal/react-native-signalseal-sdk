@@ -81,7 +81,6 @@ final public class SignalSealASAAttribution : @unchecked Swift.Sendable {
   final public func setUserAttributes(_ attrs: SignalSealAttributionSDK.UserAttributes)
   final public func enablePurchaseTracking()
   final public func getSignalSealId() -> Swift.String?
-  final public func getIdfv() -> Swift.String?
   final public func isSdkDisabled() -> Swift.Bool
   final public func getAttributionParams() async -> [Swift.String : Any]?
   final public func deleteUserData() async throws

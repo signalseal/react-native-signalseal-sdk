@@ -33,7 +33,6 @@ export interface Spec extends TurboModule {
   setUserAttributes(attrs: { [key: string]: unknown }): void;
   flush(): Promise<void>;
   getSignalSealId(): Promise<string | null>;
-  getIdfv(): Promise<string | null>;
   getAttributionParams(): Promise<{ [key: string]: string } | null>;
   isSdkDisabled(): Promise<boolean>;
   deleteUserData(): Promise<void>;

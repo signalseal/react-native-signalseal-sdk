@@ -22,10 +22,8 @@
 
 RCT_EXPORT_MODULE(SignalSealReactNative)
 
-// Our bridge touches the main-thread `UIDevice.identifierForVendor` via
-// `getIdfv()` — the Swift side dispatches onto the main queue when
-// needed, so we don't require the RN runtime to set the module up on
-// the main queue.
+// No main-queue-only work happens on module init; the Swift side
+// dispatches to the main queue internally when it needs to.
 + (BOOL)requiresMainQueueSetup {
   return NO;
 }
@@ -84,16 +82,6 @@ RCT_EXPORT_METHOD(getSignalSealId:(RCTPromiseResolveBlock)resolve
   [[SignalSealBridge shared] getSignalSealIdWithResolve:^(id _Nullable value) {
     // Swift returns `NSNull` for the nil-case; RN's bridge converts
     // that to JS `null`. We pass through verbatim.
-    resolve(value);
-  } reject:^(NSString * _Nonnull code, NSString * _Nonnull message, NSError * _Nullable error) {
-    reject(code, message, error);
-  }];
-}
-
-RCT_EXPORT_METHOD(getIdfv:(RCTPromiseResolveBlock)resolve
-                  rejecter:(RCTPromiseRejectBlock)reject)
-{
-  [[SignalSealBridge shared] getIdfvWithResolve:^(id _Nullable value) {
     resolve(value);
   } reject:^(NSString * _Nonnull code, NSString * _Nonnull message, NSError * _Nullable error) {
     reject(code, message, error);

@@ -125,15 +125,6 @@ public final class SignalSealBridge: NSObject {
         resolve(id as Any? ?? NSNull())
     }
 
-    @objc public func getIdfv(resolve: @escaping SSResolve, reject: @escaping SSReject) {
-        // The Swift API is synchronous but main-thread-guarded; the
-        // RN bridge queue isn't the main queue, so hop explicitly.
-        DispatchQueue.main.async {
-            let idfv = SignalSealAttributionSdk.shared.getIdfv()
-            resolve(idfv as Any? ?? NSNull())
-        }
-    }
-
     @objc public func getAttributionParams(resolve: @escaping SSResolve, reject: @escaping SSReject) {
         // Hop to an async context so we can await the attribution gate
         // without blocking the RN method queue. `Task` inherits the

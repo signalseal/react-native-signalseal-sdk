@@ -2205,37 +2205,6 @@
           },
           {
             "kind": "Function",
-            "name": "getIdfv",
-            "printedName": "getIdfv()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:24SignalSealAttributionSDK0abC3SdkC7getIdfvSSSgyF",
-            "mangledName": "$s24SignalSealAttributionSDK0abC3SdkC7getIdfvSSSgyF",
-            "moduleName": "SignalSealAttributionSDK",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "isSdkDisabled",
             "printedName": "isSdkDisabled()",
             "children": [
@@ -5776,7 +5745,7 @@
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealAttributionSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 23745,
+      "offset": 23331,
       "length": 5,
       "value": "false"
     },

@@ -7,9 +7,9 @@ Pod::Spec.new do |s|
   s.version      = package["version"]
   s.summary      = package["description"] || "SignalSeal React Native bridge"
   s.description  = package["description"] || "Thin bridge over the SignalSeal iOS + Android SDKs."
-  s.homepage     = "https://signalseal.dev"
+  s.homepage     = "https://signalseal.net"
   s.license      = { :type => "MIT" }
-  s.authors      = { "SignalSeal" => "hello@signalseal.dev" }
+  s.authors      = { "SignalSeal" => "hello@signalseal.net" }
   s.source       = { :git => "https://github.com/signalseal/react-native.git", :tag => "v#{s.version}" }
 
   s.platforms    = { :ios => "15.0" }

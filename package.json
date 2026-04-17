@@ -32,7 +32,7 @@
     "type": "git",
     "url": "https://github.com/signalseal/react-native.git"
   },
-  "author": "SignalSeal <hello@signalseal.dev>",
+  "author": "SignalSeal <hello@signalseal.net>",
   "license": "MIT",
   "peerDependencies": {
     "react": "*",

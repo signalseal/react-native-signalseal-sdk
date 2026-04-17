@@ -5126,76 +5126,69 @@
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 650,
-      "length": 39,
-      "value": "\"https:\/\/events.signalseal.dev\/v1\/ios\/\""
+      "length": 43,
+      "value": "\"https:\/\/events.api.signalseal.net\/v1\/ios\/\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 817,
+      "offset": 821,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 822,
+      "offset": 826,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 995,
+      "offset": 999,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 999,
+      "offset": 1003,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 1004,
+      "offset": 1008,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 1169,
+      "offset": 1173,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 1340,
+      "offset": 1344,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 1455,
+      "offset": 1459,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 1566,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1696,
+      "offset": 1570,
       "length": 1,
       "value": "5"
     },
@@ -5203,146 +5196,153 @@
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
       "offset": 1700,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1704,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 1876,
+      "offset": 1880,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 2061,
+      "offset": 2065,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 2336,
+      "offset": 2340,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 2341,
+      "offset": 2345,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 2346,
+      "offset": 2350,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2622,
+      "offset": 2626,
       "length": 26,
       "value": "\"dev.signalseal.sdk.flush\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2745,
+      "offset": 2749,
       "length": 18,
       "value": "\"SignalSealApiKey\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2796,
+      "offset": 2800,
       "length": 14,
       "value": "\"SignalSealId\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2841,
+      "offset": 2845,
       "length": 24,
       "value": "\"SignalSealFirstRunDate\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2900,
+      "offset": 2904,
       "length": 28,
       "value": "\"SignalSealInstallEventSent\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2955,
+      "offset": 2959,
       "length": 20,
       "value": "\"SignalSealASAToken\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3011,
+      "offset": 3015,
       "length": 42,
       "value": "\"SignalSealLastServerConfigFetchTimestamp\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3093,
+      "offset": 3097,
       "length": 33,
       "value": "\"SignalSealMatchRequestAttempted\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3153,
+      "offset": 3157,
       "length": 20,
       "value": "\"SignalSealUserData\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3202,
+      "offset": 3206,
       "length": 22,
       "value": "\"SignalSealEventQueue\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3257,
+      "offset": 3261,
       "length": 26,
       "value": "\"SignalSealCustomerUserId\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3321,
+      "offset": 3325,
       "length": 31,
       "value": "\"SignalSealInstallDateOverride\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3382,
+      "offset": 3386,
       "length": 23,
       "value": "\"SignalSealSdkDisabled\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3436,
+      "offset": 3440,
       "length": 24,
       "value": "\"SignalSealRemoteConfig\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3493,
+      "offset": 3497,
       "length": 26,
       "value": "\"SignalSealThrottleWindow\""
     },

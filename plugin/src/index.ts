@@ -15,7 +15,7 @@
 //
 //   "plugins": [
 //     ["@signalseal/react-native", {
-//       "iosAttributionReportEndpoint": "https://events.signalseal.dev/ios/"
+//       "iosAttributionReportEndpoint": "https://events.api.signalseal.net/ios/"
 //     }]
 //   ]
 //
@@ -30,7 +30,7 @@ export interface SignalSealPluginProps {
 	/**
 	 * URL used for Apple Search Ads attribution reporting. Written to
 	 * `Info.plist` as `NSAdvertisingAttributionReportEndpoint`. Defaults to
-	 * `https://events.signalseal.dev/ios/` when omitted. If the app already
+	 * `https://events.api.signalseal.net/ios/` when omitted. If the app already
 	 * has a different attribution endpoint set (e.g., from another SDK),
 	 * explicitly pass `iosAttributionReportEndpoint: null` to leave it
 	 * alone.
@@ -38,7 +38,7 @@ export interface SignalSealPluginProps {
 	iosAttributionReportEndpoint?: string | null
 }
 
-const DEFAULT_ENDPOINT = 'https://events.signalseal.dev/ios/'
+const DEFAULT_ENDPOINT = 'https://events.api.signalseal.net/ios/'
 
 const withSignalSealAttributionEndpoint: ConfigPlugin<SignalSealPluginProps> = (
 	config,

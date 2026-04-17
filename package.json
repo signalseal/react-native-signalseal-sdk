@@ -1,0 +1,55 @@
+{
+  "name": "@signalseal/react-native",
+  "version": "0.0.1",
+  "description": "SignalSeal React Native bridge — thin marshalling layer over the native iOS and Android SDKs.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "source": "src/index.ts",
+  "files": [
+    "lib",
+    "src",
+    "ios",
+    "android",
+    "plugin/build",
+    "plugin/package.json",
+    "app.plugin.js",
+    "*.podspec",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "android",
+    "signalseal",
+    "attribution",
+    "mmp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/signalseal/react-native.git"
+  },
+  "author": "SignalSeal <hello@signalseal.dev>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": ">=0.71.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "react": "18.2.0",
+    "react-native": "0.73.0",
+    "typescript": "^5.8.3"
+  },
+  "codegenConfig": {
+    "name": "SignalSealReactNativeSpec",
+    "type": "modules",
+    "jsSrcsDir": "src",
+    "android": {
+      "javaPackageName": "com.signalseal.reactnative"
+    }
+  }
+}

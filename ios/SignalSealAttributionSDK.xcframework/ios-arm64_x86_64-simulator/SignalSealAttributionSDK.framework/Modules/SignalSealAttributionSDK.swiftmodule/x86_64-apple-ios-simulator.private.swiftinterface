@@ -1,0 +1,132 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SignalSealAttributionSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
+import AdServices
+import AdSupport
+import AppTrackingTransparency
+import Darwin
+import Foundation
+import StoreKit
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os
+public struct AnyCodable : Swift.Codable, @unchecked Swift.Sendable {
+  public let value: Any
+  public init(_ value: Any)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public enum EventType : Swift.String, Swift.CaseIterable, Swift.Sendable {
+  case install
+  case login
+  case signUp
+  case register
+  case purchase
+  case addToCart
+  case addToWishlist
+  case initiateCheckout
+  case startTrial
+  case subscribe
+  case levelStart
+  case levelComplete
+  case tutorialComplete
+  case search
+  case viewItem
+  case viewContent
+  case share
+  case custom
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [SignalSealAttributionSDK.EventType]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [SignalSealAttributionSDK.EventType] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension SignalSealAttributionSDK.EventType {
+  public var eventName: Swift.String {
+    get
+  }
+}
+public enum LogLevel : Swift.Int, Swift.Sendable, Swift.Comparable {
+  case off
+  case error
+  case warn
+  case info
+  case debug
+  public static func < (lhs: SignalSealAttributionSDK.LogLevel, rhs: SignalSealAttributionSDK.LogLevel) -> Swift.Bool
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @available(iOS 15.0, macCatalyst 15.0, *)
+final public class SignalSealASAAttribution : @unchecked Swift.Sendable {
+  public static let shared: SignalSealAttributionSDK.SignalSealASAAttribution
+  final public func enableAppleAdsAttribution()
+  final public func disableASAAttributionTracking()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class SignalSealAttributionSdk : @unchecked Swift.Sendable {
+  public static let shared: SignalSealAttributionSDK.SignalSealAttributionSdk
+  final public func configure(apiKey: Swift.String, isDebug: Swift.Bool = false, endpointBaseUrl: Swift.String? = nil, logLevel: SignalSealAttributionSDK.LogLevel = .info, customerUserId: Swift.String? = nil)
+  final public func sendEvent(event: SignalSealAttributionSDK.EventType, name: Swift.String? = nil, parameters: [Swift.String : Any]? = nil)
+  final public func setUserAttributes(_ attrs: SignalSealAttributionSDK.UserAttributes)
+  final public func enablePurchaseTracking()
+  final public func getInstallationId() -> Swift.String?
+  final public func getIdfv() -> Swift.String?
+  final public func isSdkDisabled() -> Swift.Bool
+  final public func getAttributionParams() async -> [Swift.String : Any]?
+  final public func deleteUserData() async throws
+  final public func flush()
+  final public func setInstallDateForTesting(_ date: Foundation.Date?)
+  @objc deinit
+}
+public struct UserAttributes : Swift.Sendable, Swift.Equatable {
+  public var email: Swift.String?
+  public var phone: Swift.String?
+  public var firstName: Swift.String?
+  public var lastName: Swift.String?
+  public var dob: Swift.String?
+  public var gender: Swift.String?
+  public var city: Swift.String?
+  public var state: Swift.String?
+  public var zip: Swift.String?
+  public var country: Swift.String?
+  public var externalId: Swift.String?
+  public init(email: Swift.String? = nil, phone: Swift.String? = nil, firstName: Swift.String? = nil, lastName: Swift.String? = nil, dob: Swift.String? = nil, gender: Swift.String? = nil, city: Swift.String? = nil, state: Swift.String? = nil, zip: Swift.String? = nil, country: Swift.String? = nil, externalId: Swift.String? = nil)
+  public func toDictionary() -> [Swift.String : Any]
+  public static func == (a: SignalSealAttributionSDK.UserAttributes, b: SignalSealAttributionSDK.UserAttributes) -> Swift.Bool
+}
+public struct UserData : Swift.Codable, Swift.Sendable {
+  public let deeplinkId: Swift.String
+  public let appId: Swift.String
+  public let redirectionUrl: Swift.String
+  public let timestamp: Swift.String
+  public let fingerprint: Swift.String
+  public let method: Swift.String
+  public let url: Swift.String
+  public let queryParams: [Swift.String : SignalSealAttributionSDK.AnyCodable]
+  public let pathParams: [Swift.String : SignalSealAttributionSDK.AnyCodable]
+  public let cookies: [Swift.String : SignalSealAttributionSDK.AnyCodable]
+  public let installId: Swift.String?
+  public let eventType: Swift.String
+  public let dateDay: Swift.String
+  public let expiresAt: Swift.String?
+  public let gclid: Swift.String?
+  public init(deeplinkId: Swift.String, appId: Swift.String, redirectionUrl: Swift.String, timestamp: Swift.String, fingerprint: Swift.String, method: Swift.String, url: Swift.String, queryParams: [Swift.String : SignalSealAttributionSDK.AnyCodable], pathParams: [Swift.String : SignalSealAttributionSDK.AnyCodable], cookies: [Swift.String : SignalSealAttributionSDK.AnyCodable], installId: Swift.String?, eventType: Swift.String, dateDay: Swift.String, expiresAt: Swift.String? = nil, gclid: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension SignalSealAttributionSDK.EventType : Swift.Equatable {}
+extension SignalSealAttributionSDK.EventType : Swift.Hashable {}
+extension SignalSealAttributionSDK.EventType : Swift.RawRepresentable {}
+extension SignalSealAttributionSDK.LogLevel : Swift.Hashable {}
+extension SignalSealAttributionSDK.LogLevel : Swift.RawRepresentable {}

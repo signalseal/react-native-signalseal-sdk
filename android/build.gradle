@@ -1,0 +1,75 @@
+// android/build.gradle
+//
+// Gradle module for the SignalSeal RN bridge. Groovy DSL (not .kts) so
+// it drops into host apps that still use the react-native community
+// template's Groovy settings.gradle without ceremony.
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Versions come from the consuming app's classpath — we rely on
+        // RN's autolinking to inject the Android Gradle Plugin + Kotlin
+        // Gradle Plugin, so we don't pin them here.
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    namespace 'com.signalseal.reactnative'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 21
+        // No targetSdk on a library module — the host app sets it.
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java']
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+        }
+    }
+}
+
+repositories {
+    google()
+    mavenCentral()
+    // Consumer apps may additionally declare `mavenLocal()` in their
+    // settings.gradle during local SDK development (see the TODO below).
+}
+
+dependencies {
+    // React Native: '+' is the react-native template convention —
+    // Gradle resolves it to whatever version the host app pulled from
+    // its node_modules/react-native/android artifact.
+    implementation 'com.facebook.react:react-native:+'
+
+    // SignalSeal Android SDK — public coordinate. Use `api` so the
+    // host app's classpath sees the SDK types (useful if they want
+    // direct access to EventType, LogLevel, etc. alongside the bridge).
+    //
+    // TODO(ship): this coordinate is NOT YET PUBLISHED to Maven
+    // Central. Until it is, bring the SDK in through one of:
+    //   1) `includeBuild("../android")` composite build in the host
+    //      app's settings.gradle (recommended for monorepo dev);
+    //   2) `./gradlew :sdk:publishToMavenLocal` from sdks/android,
+    //      then add `mavenLocal()` to this module's repositories;
+    //   3) A direct `api(project(":sdk"))` substitution when the RN
+    //      bridge is built inside the monorepo alongside the Android
+    //      SDK (used by the internal example app).
+    api 'io.github.signalseal:signalseal-android-sdk:0.0.1'
+}

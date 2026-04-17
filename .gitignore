@@ -1,0 +1,39 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+.pnp
+.pnp.js
+
+# TypeScript build output
+lib/
+*.tsbuildinfo
+
+# iOS
+ios/build/
+ios/Pods/
+ios/DerivedData/
+*.xcworkspace
+*.xcuserstate
+
+# Android
+android/build/
+android/.gradle/
+android/local.properties
+android/app/build/
+android/app/release/
+*.iml
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log

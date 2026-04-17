@@ -1,0 +1,19 @@
+{
+	"name": "@signalseal/react-native-plugin",
+	"version": "0.0.1",
+	"description": "Expo config plugin for @signalseal/react-native.",
+	"main": "build/index.js",
+	"types": "build/index.d.ts",
+	"scripts": {
+		"build": "tsc",
+		"typecheck": "tsc --noEmit"
+	},
+	"files": ["build"],
+	"private": true,
+	"dependencies": {
+		"@expo/config-plugins": "^8.0.0"
+	},
+	"devDependencies": {
+		"typescript": "^5.8.3"
+	}
+}

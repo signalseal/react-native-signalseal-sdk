@@ -234,7 +234,7 @@ export const SignalSealSDK = {
   /**
    * iOS-only. Enables automatic StoreKit 2 purchase tracking. Deliberately
    * decoupled from {@link enableAppleAdsAttribution}. No-op on Android
-   * (Play Billing tracking isn't part of the 0.0.1 surface).
+   * (Play Billing tracking isn't part of the v0 surface).
    */
   enablePurchaseTracking(): void {
     if (Platform.OS !== 'ios') return;

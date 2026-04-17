@@ -16,7 +16,7 @@ import net.signalseal.attribution.UserAttributes
  *
  * Old-architecture compatible (`ReactContextBaseJavaModule` + @ReactMethod).
  * New-arch apps pick this up via the autolinked ReactPackage; codegen
- * isn't involved on the Android side for this 0.0.1 cut — we accept the
+ * isn't involved on the Android side in v0 — we accept the
  * small perf overhead of the legacy bridge in exchange for trivially
  * working on every supported RN version (>= 0.71) without per-arch
  * build flags.
@@ -123,7 +123,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
 
     @ReactMethod
     fun enablePurchaseTracking() {
-        // iOS-only for 0.0.1. Play Billing tracking isn't in the public
+        // iOS-only. Play Billing tracking isn't in the public
         // Android SDK yet — when it lands, wire it up here.
     }
 

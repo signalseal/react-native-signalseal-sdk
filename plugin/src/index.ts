@@ -2,9 +2,9 @@
 // an Expo-managed app otherwise can't configure (no native code access):
 //
 //   - iOS: injects `NSAdvertisingAttributionReportEndpoint` into Info.plist
-//     (required for Apple Search Ads attribution). AppStack's endpoint is
-//     `https://ios-appstack.com/`; ours defaults to the SignalSeal
-//     events-api domain but can be overridden in app config.
+//     (required for Apple Search Ads attribution). Defaults to the
+//     SignalSeal events-api domain (`https://events.api.signalseal.net/ios/`)
+//     but can be overridden in app config.
 //
 //   - Android: our manifest merges INTERNET, ACCESS_NETWORK_STATE, and
 //     AD_ID from the SDK AAR. Nothing to inject. The plugin still exists

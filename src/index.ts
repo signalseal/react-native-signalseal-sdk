@@ -232,10 +232,9 @@ export const SignalSealAttributionSdk = {
   },
 
   /**
-   * iOS-only. Enables automatic StoreKit 2 purchase tracking. Separate
-   * from {@link enableAppleAdsAttribution} per our divergence from
-   * AppStack. No-op on Android (Play Billing tracking isn't part of
-   * the 0.0.1 surface).
+   * iOS-only. Enables automatic StoreKit 2 purchase tracking. Deliberately
+   * decoupled from {@link enableAppleAdsAttribution}. No-op on Android
+   * (Play Billing tracking isn't part of the 0.0.1 surface).
    */
   enablePurchaseTracking(): void {
     if (Platform.OS !== 'ios') return;

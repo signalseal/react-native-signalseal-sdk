@@ -20,9 +20,8 @@ Pod::Spec.new do |s|
   s.public_header_files = "ios/**/*.h"
 
   # Vendor the precompiled iOS SDK xcframework directly inside the RN
-  # package (AppStack / AppsFlyer / Branch pattern). Consumers run
-  # `pod install` and get everything in one step — no separate SPM or
-  # Pod dependency required on the host app side.
+  # package. Consumers run `pod install` and get everything in one step —
+  # no separate SPM or Pod dependency required on the host app side.
   #
   # The binary is rebuilt from ../ios-signalseal-core-sdk/ via its
   # scripts/build-xcframework.sh (which auto-copies into ios/ here)

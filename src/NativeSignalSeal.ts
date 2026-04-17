@@ -35,7 +35,6 @@ export interface Spec extends TurboModule {
   getSignalSealId(): Promise<string | null>;
   getAttributionParams(): Promise<{ [key: string]: string } | null>;
   isSdkDisabled(): Promise<boolean>;
-  deleteUserData(): Promise<void>;
   enableAppleAdsAttribution(): void;
   enablePurchaseTracking(): void;
 }

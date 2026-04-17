@@ -108,14 +108,5 @@ RCT_EXPORT_METHOD(isSdkDisabled:(RCTPromiseResolveBlock)resolve
   }];
 }
 
-RCT_EXPORT_METHOD(deleteUserData:(RCTPromiseResolveBlock)resolve
-                  rejecter:(RCTPromiseRejectBlock)reject)
-{
-  [[SignalSealBridge shared] deleteUserDataWithResolve:^(id _Nullable value) {
-    resolve(value);
-  } reject:^(NSString * _Nonnull code, NSString * _Nonnull message, NSError * _Nullable error) {
-    reject(code, message, error);
-  }];
-}
 
 @end

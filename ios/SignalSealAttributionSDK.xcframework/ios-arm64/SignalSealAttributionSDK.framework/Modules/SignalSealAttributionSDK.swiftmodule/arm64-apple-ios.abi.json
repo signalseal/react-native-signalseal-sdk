@@ -2272,29 +2272,6 @@
           },
           {
             "kind": "Function",
-            "name": "deleteUserData",
-            "printedName": "deleteUserData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:24SignalSealAttributionSDK0abC3SdkC14deleteUserDatayyYaKF",
-            "mangledName": "$s24SignalSealAttributionSDK0abC3SdkC14deleteUserDatayyYaKF",
-            "moduleName": "SignalSealAttributionSDK",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "flush",
             "printedName": "flush()",
             "children": [
@@ -5745,7 +5722,7 @@
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealAttributionSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 23331,
+      "offset": 22101,
       "length": 5,
       "value": "false"
     },

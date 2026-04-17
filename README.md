@@ -57,7 +57,6 @@ const attribution = await SignalSealAttributionSdk.getAttributionParams();
 | `getSignalSealId()` | `Promise<string \| null>` | iOS, Android |
 | `getAttributionParams()` | `Promise<Record<string, string> \| null>` | iOS, Android |
 | `isSdkDisabled()` | `Promise<boolean>` | iOS, Android |
-| `deleteUserData()` | `Promise<void>` | iOS, Android |
 | `enableAppleAdsAttribution()` | `void` | iOS only (Android no-op) |
 | `enablePurchaseTracking()` | `void` | iOS only (Android no-op) |
 

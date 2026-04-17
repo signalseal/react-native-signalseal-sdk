@@ -223,19 +223,6 @@ export const SignalSealAttributionSdk = {
   },
 
   /**
-   * Clears locally persisted SDK state. On iOS this also best-effort
-   * requests server-side deletion (TODO in the iOS SDK — currently
-   * local-only). On Android this calls `clearData()`.
-   */
-  async deleteUserData(): Promise<void> {
-    try {
-      await NativeSignalSeal.deleteUserData();
-    } catch (err) {
-      throw SignalSealError.from(err);
-    }
-  },
-
-  /**
    * iOS-only. Starts the Apple Search Ads attribution flow via
    * `SignalSealASAAttribution.shared`. No-op on Android.
    */

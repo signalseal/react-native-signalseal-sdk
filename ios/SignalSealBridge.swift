@@ -155,19 +155,4 @@ public final class SignalSealBridge: NSObject {
         resolve(NSNumber(value: SignalSealAttributionSdk.shared.isSdkDisabled()))
     }
 
-    @objc public func deleteUserData(resolve: @escaping SSResolve, reject: @escaping SSReject) {
-        Task { [resolve, reject] in
-            do {
-                try await SignalSealAttributionSdk.shared.deleteUserData()
-                resolve(NSNull())
-            } catch {
-                // TS wraps this into `SignalSealError(NATIVE_ERROR, …)`.
-                reject(
-                    "DELETE_USER_DATA_FAILED",
-                    error.localizedDescription,
-                    error as NSError
-                )
-            }
-        }
-    }
 }

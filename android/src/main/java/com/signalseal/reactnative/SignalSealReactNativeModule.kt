@@ -180,18 +180,6 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
         }
     }
 
-    @ReactMethod
-    fun deleteUserData(promise: Promise) {
-        try {
-            // Android SDK's equivalent is `clearData()` — there's no
-            // server-side delete yet. This matches iOS's local-only
-            // behaviour in 0.0.1.
-            SignalSealAttributionSdk.clearData()
-            promise.resolve(null)
-        } catch (t: Throwable) {
-            promise.reject("DELETE_USER_DATA_FAILED", t.message, t)
-        }
-    }
 
     // --------------------------------------------------------------
     // Helpers

@@ -83,7 +83,6 @@ final public class SignalSealASAAttribution : @unchecked Swift.Sendable {
   final public func getSignalSealId() -> Swift.String?
   final public func isSdkDisabled() -> Swift.Bool
   final public func getAttributionParams() async -> [Swift.String : Any]?
-  final public func deleteUserData() async throws
   final public func flush()
   final public func setInstallDateForTesting(_ date: Foundation.Date?)
   @objc deinit

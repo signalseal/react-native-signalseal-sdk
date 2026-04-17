@@ -32,7 +32,7 @@ RCT_EXPORT_MODULE(SignalSealReactNative)
 // uses its own locks, so contention here is just for the Obj-C
 // marshalling layer.
 - (dispatch_queue_t)methodQueue {
-  return dispatch_queue_create("dev.signalseal.reactnative", DISPATCH_QUEUE_SERIAL);
+  return dispatch_queue_create("net.signalseal.reactnative", DISPATCH_QUEUE_SERIAL);
 }
 
 #pragma mark - Fire-and-forget methods

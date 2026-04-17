@@ -2,7 +2,7 @@
 <!--
   Intentionally empty: the RN bridge declares no permissions, no
   components, no queries of its own. The underlying SignalSeal Android
-  SDK's manifest (from dev.signalseal:signalseal-android-sdk) is merged
+  SDK's manifest (from net.signalseal:signalseal-android-sdk) is merged
   in transitively — that's where INTERNET / install-referrer consumer
   declarations live.
 -->

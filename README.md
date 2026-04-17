@@ -18,7 +18,7 @@ cd ios && pod install
 
 **Android:**
 
-Autolinking handles it. The bridge transitively pulls in `dev.signalseal:signalseal-android-sdk`.
+Autolinking handles it. The bridge transitively pulls in `io.github.signalseal:signalseal-android-sdk`.
 
 ## Usage
 

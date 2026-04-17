@@ -1,6 +1,6 @@
 // SignalSealBridge.swift
 //
-// @objc shim that adapts the Swift-native `SignalSealAttributionSdk`
+// @objc shim that adapts the Swift-native `SignalSealSDK`
 // surface to the RCT-friendly callback-and-NSDictionary idiom the .mm
 // file uses. RCT can't speak Swift optionals, enums, or `async`
 // functions directly; everything here funnels through types Obj-C can
@@ -44,7 +44,7 @@ public final class SignalSealBridge: NSObject {
         let customerUserId = args["customerUserId"] as? String
         let level = mapLogLevel(args["logLevel"] as? String)
 
-        SignalSealAttributionSdk.shared.configure(
+        SignalSealSDK.shared.configure(
             apiKey: apiKey,
             isDebug: isDebug,
             endpointBaseUrl: endpointBaseUrl,
@@ -69,7 +69,7 @@ public final class SignalSealBridge: NSObject {
     @objc public func sendEvent(type: String, name: String?, parameters: NSDictionary?) {
         let eventType = EventType(rawValue: type) ?? .custom
         let params = (parameters as? [String: Any])
-        SignalSealAttributionSdk.shared.sendEvent(event: eventType, name: name, parameters: params)
+        SignalSealSDK.shared.sendEvent(event: eventType, name: name, parameters: params)
     }
 
     @objc public func setUserAttributes(attrs: NSDictionary) {
@@ -92,7 +92,7 @@ public final class SignalSealBridge: NSObject {
             country: attrs["country"] as? String,
             externalId: attrs["external_id"] as? String
         )
-        SignalSealAttributionSdk.shared.setUserAttributes(attributes)
+        SignalSealSDK.shared.setUserAttributes(attributes)
     }
 
     // MARK: - Attribution control
@@ -106,7 +106,7 @@ public final class SignalSealBridge: NSObject {
     }
 
     @objc public func enablePurchaseTracking() {
-        SignalSealAttributionSdk.shared.enablePurchaseTracking()
+        SignalSealSDK.shared.enablePurchaseTracking()
     }
 
     // MARK: - Promise-returning APIs
@@ -116,12 +116,12 @@ public final class SignalSealBridge: NSObject {
         // synchronously once the scheduling call has returned. The JS
         // contract is "flush was requested", not "flush has landed on
         // the wire" — matching the native behaviour.
-        SignalSealAttributionSdk.shared.flush()
+        SignalSealSDK.shared.flush()
         resolve(NSNull())
     }
 
     @objc public func getSignalSealId(resolve: @escaping SSResolve, reject: @escaping SSReject) {
-        let id = SignalSealAttributionSdk.shared.getSignalSealId()
+        let id = SignalSealSDK.shared.getSignalSealId()
         resolve(id as Any? ?? NSNull())
     }
 
@@ -131,7 +131,7 @@ public final class SignalSealBridge: NSObject {
         // default actor, which is fine — we serialize back into Obj-C
         // types inside the task before calling `resolve`.
         Task { [resolve] in
-            let params = await SignalSealAttributionSdk.shared.getAttributionParams()
+            let params = await SignalSealSDK.shared.getAttributionParams()
             guard let dict = params else {
                 resolve(NSNull())
                 return
@@ -152,7 +152,7 @@ public final class SignalSealBridge: NSObject {
     }
 
     @objc public func isSdkDisabled(resolve: @escaping SSResolve, reject: @escaping SSReject) {
-        resolve(NSNumber(value: SignalSealAttributionSdk.shared.isSdkDisabled()))
+        resolve(NSNumber(value: SignalSealSDK.shared.isSdkDisabled()))
     }
 
 }

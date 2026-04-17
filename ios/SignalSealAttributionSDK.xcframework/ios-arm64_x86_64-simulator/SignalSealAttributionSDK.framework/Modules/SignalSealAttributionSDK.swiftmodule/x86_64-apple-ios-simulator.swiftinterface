@@ -74,8 +74,8 @@ final public class SignalSealASAAttribution : @unchecked Swift.Sendable {
   final public func disableASAAttributionTracking()
   @objc deinit
 }
-@_hasMissingDesignatedInitializers final public class SignalSealAttributionSdk : @unchecked Swift.Sendable {
-  public static let shared: SignalSealAttributionSDK.SignalSealAttributionSdk
+@_hasMissingDesignatedInitializers final public class SignalSealSDK : @unchecked Swift.Sendable {
+  public static let shared: SignalSealAttributionSDK.SignalSealSDK
   final public func configure(apiKey: Swift.String, isDebug: Swift.Bool = false, endpointBaseUrl: Swift.String? = nil, logLevel: SignalSealAttributionSDK.LogLevel = .info, customerUserId: Swift.String? = nil)
   final public func sendEvent(event: SignalSealAttributionSDK.EventType, name: Swift.String? = nil, parameters: [Swift.String : Any]? = nil)
   final public func setUserAttributes(_ attrs: SignalSealAttributionSDK.UserAttributes)

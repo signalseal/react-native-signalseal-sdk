@@ -23,27 +23,27 @@ Autolinking handles it. The bridge transitively pulls in `dev.signalseal:signals
 ## Usage
 
 ```ts
-import { SignalSealAttributionSdk, EventType } from '@signalseal/react-native';
+import { SignalSealSDK, EventType } from '@signalseal/react-native';
 
-SignalSealAttributionSdk.configure({
+SignalSealSDK.configure({
   apiKey: 'ak_ios_01J...', // or ak_android_*
   isDebug: __DEV__,
   logLevel: 'info',
 });
 
-SignalSealAttributionSdk.sendEvent(EventType.Purchase, {
+SignalSealSDK.sendEvent(EventType.Purchase, {
   revenue: 9.99,
   currency: 'USD',
 });
 
-SignalSealAttributionSdk.setUserAttributes({
+SignalSealSDK.setUserAttributes({
   email: 'user@example.com',
   firstName: 'Jane',
   lastName: 'Doe',
 });
 
-const signalSealId = await SignalSealAttributionSdk.getSignalSealId();
-const attribution = await SignalSealAttributionSdk.getAttributionParams();
+const signalSealId = await SignalSealSDK.getSignalSealId();
+const attribution = await SignalSealSDK.getAttributionParams();
 ```
 
 ## API

@@ -1924,8 +1924,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "SignalSealAttributionSdk",
-        "printedName": "SignalSealAttributionSdk",
+        "name": "SignalSealSDK",
+        "printedName": "SignalSealSDK",
         "children": [
           {
             "kind": "Var",
@@ -1934,14 +1934,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "SignalSealAttributionSdk",
-                "printedName": "SignalSealAttributionSDK.SignalSealAttributionSdk",
-                "usr": "s:24SignalSealAttributionSDK0abC3SdkC"
+                "name": "SignalSealSDK",
+                "printedName": "SignalSealAttributionSDK.SignalSealSDK",
+                "usr": "s:24SignalSealAttributionSDK0abD0C"
               }
             ],
             "declKind": "Var",
-            "usr": "s:24SignalSealAttributionSDK0abC3SdkC6sharedACvpZ",
-            "mangledName": "$s24SignalSealAttributionSDK0abC3SdkC6sharedACvpZ",
+            "usr": "s:24SignalSealAttributionSDK0abD0C6sharedACvpZ",
+            "mangledName": "$s24SignalSealAttributionSDK0abD0C6sharedACvpZ",
             "moduleName": "SignalSealAttributionSDK",
             "static": true,
             "declAttributes": [
@@ -1961,14 +1961,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "SignalSealAttributionSdk",
-                    "printedName": "SignalSealAttributionSDK.SignalSealAttributionSdk",
-                    "usr": "s:24SignalSealAttributionSDK0abC3SdkC"
+                    "name": "SignalSealSDK",
+                    "printedName": "SignalSealAttributionSDK.SignalSealSDK",
+                    "usr": "s:24SignalSealAttributionSDK0abD0C"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:24SignalSealAttributionSDK0abC3SdkC6sharedACvgZ",
-                "mangledName": "$s24SignalSealAttributionSDK0abC3SdkC6sharedACvgZ",
+                "usr": "s:24SignalSealAttributionSDK0abD0C6sharedACvgZ",
+                "mangledName": "$s24SignalSealAttributionSDK0abD0C6sharedACvgZ",
                 "moduleName": "SignalSealAttributionSDK",
                 "static": true,
                 "implicit": true,
@@ -2041,8 +2041,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:24SignalSealAttributionSDK0abC3SdkC9configure6apiKey7isDebug15endpointBaseUrl8logLevel14customerUserIdySS_SbSSSgAA03LogO0OAJtF",
-            "mangledName": "$s24SignalSealAttributionSDK0abC3SdkC9configure6apiKey7isDebug15endpointBaseUrl8logLevel14customerUserIdySS_SbSSSgAA03LogO0OAJtF",
+            "usr": "s:24SignalSealAttributionSDK0abD0C9configure6apiKey7isDebug15endpointBaseUrl8logLevel14customerUserIdySS_SbSSSgAA03LogN0OAJtF",
+            "mangledName": "$s24SignalSealAttributionSDK0abD0C9configure6apiKey7isDebug15endpointBaseUrl8logLevel14customerUserIdySS_SbSSSgAA03LogN0OAJtF",
             "moduleName": "SignalSealAttributionSDK",
             "declAttributes": [
               "Final",
@@ -2112,8 +2112,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:24SignalSealAttributionSDK0abC3SdkC9sendEvent5event4name10parametersyAA0G4TypeO_SSSgSDySSypGSgtF",
-            "mangledName": "$s24SignalSealAttributionSDK0abC3SdkC9sendEvent5event4name10parametersyAA0G4TypeO_SSSgSDySSypGSgtF",
+            "usr": "s:24SignalSealAttributionSDK0abD0C9sendEvent5event4name10parametersyAA0F4TypeO_SSSgSDySSypGSgtF",
+            "mangledName": "$s24SignalSealAttributionSDK0abD0C9sendEvent5event4name10parametersyAA0F4TypeO_SSSgSDySSypGSgtF",
             "moduleName": "SignalSealAttributionSDK",
             "declAttributes": [
               "Final",
@@ -2140,8 +2140,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:24SignalSealAttributionSDK0abC3SdkC17setUserAttributesyyAA0gH0VF",
-            "mangledName": "$s24SignalSealAttributionSDK0abC3SdkC17setUserAttributesyyAA0gH0VF",
+            "usr": "s:24SignalSealAttributionSDK0abD0C17setUserAttributesyyAA0fG0VF",
+            "mangledName": "$s24SignalSealAttributionSDK0abD0C17setUserAttributesyyAA0fG0VF",
             "moduleName": "SignalSealAttributionSDK",
             "declAttributes": [
               "Final",
@@ -2162,8 +2162,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:24SignalSealAttributionSDK0abC3SdkC22enablePurchaseTrackingyyF",
-            "mangledName": "$s24SignalSealAttributionSDK0abC3SdkC22enablePurchaseTrackingyyF",
+            "usr": "s:24SignalSealAttributionSDK0abD0C22enablePurchaseTrackingyyF",
+            "mangledName": "$s24SignalSealAttributionSDK0abD0C22enablePurchaseTrackingyyF",
             "moduleName": "SignalSealAttributionSDK",
             "declAttributes": [
               "Final",
@@ -2193,8 +2193,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:24SignalSealAttributionSDK0abC3SdkC03getaB2IdSSSgyF",
-            "mangledName": "$s24SignalSealAttributionSDK0abC3SdkC03getaB2IdSSSgyF",
+            "usr": "s:24SignalSealAttributionSDK0abD0C03getaB2IdSSSgyF",
+            "mangledName": "$s24SignalSealAttributionSDK0abD0C03getaB2IdSSSgyF",
             "moduleName": "SignalSealAttributionSDK",
             "declAttributes": [
               "Final",
@@ -2216,8 +2216,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:24SignalSealAttributionSDK0abC3SdkC02isE8DisabledSbyF",
-            "mangledName": "$s24SignalSealAttributionSDK0abC3SdkC02isE8DisabledSbyF",
+            "usr": "s:24SignalSealAttributionSDK0abD0C13isSdkDisabledSbyF",
+            "mangledName": "$s24SignalSealAttributionSDK0abD0C13isSdkDisabledSbyF",
             "moduleName": "SignalSealAttributionSDK",
             "declAttributes": [
               "Final",
@@ -2260,8 +2260,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:24SignalSealAttributionSDK0abC3SdkC03getC6ParamsSDySSypGSgyYaF",
-            "mangledName": "$s24SignalSealAttributionSDK0abC3SdkC03getC6ParamsSDySSypGSgyYaF",
+            "usr": "s:24SignalSealAttributionSDK0abD0C03getC6ParamsSDySSypGSgyYaF",
+            "mangledName": "$s24SignalSealAttributionSDK0abD0C03getC6ParamsSDySSypGSgyYaF",
             "moduleName": "SignalSealAttributionSDK",
             "declAttributes": [
               "Final",
@@ -2282,8 +2282,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:24SignalSealAttributionSDK0abC3SdkC5flushyyF",
-            "mangledName": "$s24SignalSealAttributionSDK0abC3SdkC5flushyyF",
+            "usr": "s:24SignalSealAttributionSDK0abD0C5flushyyF",
+            "mangledName": "$s24SignalSealAttributionSDK0abD0C5flushyyF",
             "moduleName": "SignalSealAttributionSDK",
             "declAttributes": [
               "Final",
@@ -2318,8 +2318,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:24SignalSealAttributionSDK0abC3SdkC24setInstallDateForTestingyy10Foundation0H0VSgF",
-            "mangledName": "$s24SignalSealAttributionSDK0abC3SdkC24setInstallDateForTestingyy10Foundation0H0VSgF",
+            "usr": "s:24SignalSealAttributionSDK0abD0C24setInstallDateForTestingyy10Foundation0G0VSgF",
+            "mangledName": "$s24SignalSealAttributionSDK0abD0C24setInstallDateForTestingyy10Foundation0G0VSgF",
             "moduleName": "SignalSealAttributionSDK",
             "declAttributes": [
               "Final",
@@ -2330,8 +2330,8 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:24SignalSealAttributionSDK0abC3SdkC",
-        "mangledName": "$s24SignalSealAttributionSDK0abC3SdkC",
+        "usr": "s:24SignalSealAttributionSDK0abD0C",
+        "mangledName": "$s24SignalSealAttributionSDK0abD0C",
         "moduleName": "SignalSealAttributionSDK",
         "declAttributes": [
           "Final",
@@ -5680,49 +5680,49 @@
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealASAAttribution.swift",
       "kind": "BooleanLiteral",
-      "offset": 602,
+      "offset": 591,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealASAAttribution.swift",
       "kind": "BooleanLiteral",
-      "offset": 635,
+      "offset": 624,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealAttributionSdk.swift",
+      "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 524,
+      "offset": 502,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealAttributionSdk.swift",
+      "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 1096,
+      "offset": 1074,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealAttributionSdk.swift",
+      "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealSDK.swift",
       "kind": "Array",
-      "offset": 1169,
+      "offset": 1147,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealAttributionSdk.swift",
+      "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 1977,
+      "offset": 1955,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealAttributionSdk.swift",
+      "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 22051,
+      "offset": 22029,
       "length": 5,
       "value": "false"
     },

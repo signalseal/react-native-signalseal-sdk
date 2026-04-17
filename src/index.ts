@@ -65,7 +65,7 @@ const VALID_EVENT_TYPE_VALUES: ReadonlySet<string> = new Set<string>(
  * delegation layer — every method forwards to the native TurboModule
  * after light argument checking. No attribution logic lives here.
  */
-export const SignalSealAttributionSdk = {
+export const SignalSealSDK = {
   /**
    * Initialise the SDK. Safe to call multiple times; the native SDKs
    * treat the second call as a no-op. Validates args before crossing
@@ -242,4 +242,4 @@ export const SignalSealAttributionSdk = {
   },
 };
 
-export default SignalSealAttributionSdk;
+export default SignalSealSDK;

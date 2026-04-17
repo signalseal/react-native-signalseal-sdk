@@ -31,7 +31,7 @@ export enum EventType {
 export type LogLevel = 'off' | 'error' | 'warn' | 'info' | 'debug';
 
 /**
- * Arguments accepted by {@link SignalSealAttributionSdk.configure}. All
+ * Arguments accepted by {@link SignalSealSDK.configure}. All
  * fields except `apiKey` are optional — the native SDKs own the defaults
  * (endpoint, log level, debug). The bridge does NOT hardcode defaults.
  */
@@ -80,7 +80,7 @@ export interface UserAttributes {
 }
 
 /**
- * Shape returned by {@link SignalSealAttributionSdk.getAttributionParams}.
+ * Shape returned by {@link SignalSealSDK.getAttributionParams}.
  *
  * iOS returns a broader set (deeplink_id, gclid, install_id, method, url,
  * timestamp, event_type, redirection_url) as `Record<string, any>`;

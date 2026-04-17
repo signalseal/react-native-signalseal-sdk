@@ -8,7 +8,7 @@ import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 import com.signalseal.attribution.EventType
 import com.signalseal.attribution.LogLevel
-import com.signalseal.attribution.SignalSealAttributionSdk
+import com.signalseal.attribution.SignalSealSDK
 import com.signalseal.attribution.UserAttributes
 
 /**
@@ -60,7 +60,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
         // isn't necessary — the `@JvmOverloads` on `configure` exposes
         // a variant without `endpointBaseUrl`, so we branch.
         if (endpointBaseUrl != null) {
-            SignalSealAttributionSdk.configure(
+            SignalSealSDK.configure(
                 context = reactApplicationContext,
                 apiKey = apiKey,
                 isDebug = isDebug,
@@ -69,7 +69,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
                 customerUserId = customerUserId,
             )
         } else {
-            SignalSealAttributionSdk.configure(
+            SignalSealSDK.configure(
                 context = reactApplicationContext,
                 apiKey = apiKey,
                 isDebug = isDebug,
@@ -88,7 +88,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
             // phantom `CUSTOM` event without a name.
             return
         }
-        SignalSealAttributionSdk.sendEvent(
+        SignalSealSDK.sendEvent(
             event = type,
             name = name,
             parameters = parameters?.toHashMap(),
@@ -112,7 +112,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
             country = attrs.getStringSafe("country"),
             externalId = attrs.getStringSafe("external_id"),
         )
-        SignalSealAttributionSdk.setUserAttributes(ua)
+        SignalSealSDK.setUserAttributes(ua)
     }
 
     @ReactMethod
@@ -134,7 +134,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
     @ReactMethod
     fun flush(promise: Promise) {
         try {
-            SignalSealAttributionSdk.flush()
+            SignalSealSDK.flush()
             promise.resolve(null)
         } catch (t: Throwable) {
             promise.reject("FLUSH_FAILED", t.message, t)
@@ -144,7 +144,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
     @ReactMethod
     fun getSignalSealId(promise: Promise) {
         try {
-            promise.resolve(SignalSealAttributionSdk.getSignalSealId())
+            promise.resolve(SignalSealSDK.getSignalSealId())
         } catch (t: Throwable) {
             promise.reject("GET_SIGNALSEAL_ID_FAILED", t.message, t)
         }
@@ -153,7 +153,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
     @ReactMethod
     fun getAttributionParams(promise: Promise) {
         try {
-            val map = SignalSealAttributionSdk.getAttributionParams()
+            val map = SignalSealSDK.getAttributionParams()
             if (map.isEmpty()) {
                 // Parity with iOS: return null when there are no
                 // attribution params yet, so the TS facade's
@@ -174,7 +174,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
     @ReactMethod
     fun isSdkDisabled(promise: Promise) {
         try {
-            promise.resolve(SignalSealAttributionSdk.isSdkDisabled())
+            promise.resolve(SignalSealSDK.isSdkDisabled())
         } catch (t: Throwable) {
             promise.reject("IS_SDK_DISABLED_FAILED", t.message, t)
         }

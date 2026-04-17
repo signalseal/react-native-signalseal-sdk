@@ -1,4 +1,4 @@
-package com.signalseal.reactnative
+package net.signalseal.reactnative
 
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.bridge.Promise
@@ -6,10 +6,10 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
-import com.signalseal.attribution.EventType
-import com.signalseal.attribution.LogLevel
-import com.signalseal.attribution.SignalSealSDK
-import com.signalseal.attribution.UserAttributes
+import net.signalseal.attribution.EventType
+import net.signalseal.attribution.LogLevel
+import net.signalseal.attribution.SignalSealSDK
+import net.signalseal.attribution.UserAttributes
 
 /**
  * React Native bridge module for the SignalSeal Android SDK.

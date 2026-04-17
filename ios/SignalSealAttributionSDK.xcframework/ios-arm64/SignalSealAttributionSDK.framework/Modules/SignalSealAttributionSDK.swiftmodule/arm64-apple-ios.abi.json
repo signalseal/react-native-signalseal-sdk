@@ -5192,7 +5192,7 @@
       "kind": "StringLiteral",
       "offset": 2603,
       "length": 26,
-      "value": "\"dev.signalseal.sdk.flush\""
+      "value": "\"net.signalseal.sdk.flush\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
@@ -5444,7 +5444,7 @@
       "kind": "StringLiteral",
       "offset": 509,
       "length": 27,
-      "value": "\"dev.signalseal.sdk.events\""
+      "value": "\"net.signalseal.sdk.events\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/EventsRepository.swift",
@@ -5500,7 +5500,7 @@
       "kind": "StringLiteral",
       "offset": 420,
       "length": 20,
-      "value": "\"dev.signalseal.sdk\""
+      "value": "\"net.signalseal.sdk\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Config\/RemoteConfig.swift",

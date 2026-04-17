@@ -1,4 +1,4 @@
-package com.signalseal.reactnative
+package net.signalseal.reactnative
 
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule
@@ -12,7 +12,7 @@ import com.facebook.react.uimanager.ViewManager
  *     dependency: {
  *       platforms: {
  *         android: {
- *           packageImportPath: 'import com.signalseal.reactnative.SignalSealReactNativePackage;',
+ *           packageImportPath: 'import net.signalseal.reactnative.SignalSealReactNativePackage;',
  *           packageInstance: 'new SignalSealReactNativePackage()',
  *         },
  *       },

@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://signalseal.net"
   s.license      = { :type => "MIT" }
   s.authors      = { "SignalSeal" => "hello@signalseal.net" }
-  s.source       = { :git => "https://github.com/signalseal/react-native.git", :tag => "v#{s.version}" }
+  s.source       = { :git => "https://github.com/signalseal/react-native-signalseal-sdk.git", :tag => "v#{s.version}" }
 
   s.platforms    = { :ios => "15.0" }
   s.swift_version = "5.9"

@@ -5295,7 +5295,7 @@
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Match\/DeviceSignals\/DefaultMatchDeviceSignalsProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 5256,
+      "offset": 5674,
       "length": 5,
       "value": "false"
     },
@@ -5722,7 +5722,7 @@
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 22029,
+      "offset": 22531,
       "length": 5,
       "value": "false"
     },
@@ -5785,91 +5785,105 @@
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1734,
+      "offset": 1591,
+      "length": 16,
+      "value": "\"hardware_model\""
+    },
+    {
+      "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 1633,
+      "length": 12,
+      "value": "\"os_version\""
+    },
+    {
+      "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 2359,
       "length": 8,
       "value": "\"app_id\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1773,
+      "offset": 2398,
       "length": 17,
       "value": "\"installation_id\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1821,
+      "offset": 2446,
       "length": 18,
       "value": "\"customer_user_id\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1866,
+      "offset": 2491,
       "length": 13,
       "value": "\"sdk_version\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1905,
+      "offset": 2530,
       "length": 12,
       "value": "\"utm_source\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1943,
+      "offset": 2568,
       "length": 12,
       "value": "\"utm_medium\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1983,
+      "offset": 2608,
       "length": 14,
       "value": "\"utm_campaign\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2021,
+      "offset": 2646,
       "length": 10,
       "value": "\"utm_term\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2058,
+      "offset": 2683,
       "length": 13,
       "value": "\"utm_content\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2118,
+      "offset": 2743,
       "length": 14,
       "value": "\"raw_referrer\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2164,
+      "offset": 2789,
       "length": 19,
       "value": "\"referrer_click_ts\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2212,
+      "offset": 2837,
       "length": 16,
       "value": "\"app_install_ts\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2255,
+      "offset": 2880,
       "length": 13,
       "value": "\"deeplink_id\""
     },

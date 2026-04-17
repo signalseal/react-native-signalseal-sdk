@@ -104,7 +104,7 @@ public struct UserAttributes : Swift.Sendable, Swift.Equatable {
   public static func == (a: SignalSealAttributionSDK.UserAttributes, b: SignalSealAttributionSDK.UserAttributes) -> Swift.Bool
 }
 public struct UserData : Swift.Codable, Swift.Sendable {
-  public let deeplinkId: Swift.String
+  public let deeplinkId: Swift.String?
   public let appId: Swift.String
   public let redirectionUrl: Swift.String
   public let timestamp: Swift.String
@@ -119,7 +119,7 @@ public struct UserData : Swift.Codable, Swift.Sendable {
   public let dateDay: Swift.String
   public let expiresAt: Swift.String?
   public let gclid: Swift.String?
-  public init(deeplinkId: Swift.String, appId: Swift.String, redirectionUrl: Swift.String, timestamp: Swift.String, fingerprint: Swift.String, method: Swift.String, url: Swift.String, queryParams: [Swift.String : SignalSealAttributionSDK.AnyCodable], pathParams: [Swift.String : SignalSealAttributionSDK.AnyCodable], cookies: [Swift.String : SignalSealAttributionSDK.AnyCodable], installId: Swift.String?, eventType: Swift.String, dateDay: Swift.String, expiresAt: Swift.String? = nil, gclid: Swift.String? = nil)
+  public init(deeplinkId: Swift.String?, appId: Swift.String, redirectionUrl: Swift.String, timestamp: Swift.String, fingerprint: Swift.String, method: Swift.String, url: Swift.String, queryParams: [Swift.String : SignalSealAttributionSDK.AnyCodable], pathParams: [Swift.String : SignalSealAttributionSDK.AnyCodable], cookies: [Swift.String : SignalSealAttributionSDK.AnyCodable], installId: Swift.String?, eventType: Swift.String, dateDay: Swift.String, expiresAt: Swift.String? = nil, gclid: Swift.String? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }

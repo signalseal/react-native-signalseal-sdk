@@ -42,7 +42,7 @@ SignalSealAttributionSdk.setUserAttributes({
   lastName: 'Doe',
 });
 
-const installId = await SignalSealAttributionSdk.getInstallationId();
+const signalSealId = await SignalSealAttributionSdk.getSignalSealId();
 const attribution = await SignalSealAttributionSdk.getAttributionParams();
 ```
 
@@ -54,7 +54,7 @@ const attribution = await SignalSealAttributionSdk.getAttributionParams();
 | `sendEvent(type, params?, name?)` | `void` | iOS, Android |
 | `setUserAttributes(attrs)` | `void` | iOS, Android |
 | `flush()` | `Promise<void>` | iOS, Android |
-| `getInstallationId()` | `Promise<string \| null>` | iOS, Android |
+| `getSignalSealId()` | `Promise<string \| null>` | iOS, Android |
 | `getIdfv()` | `Promise<string \| null>` | iOS only (Android returns `null`) |
 | `getAttributionParams()` | `Promise<Record<string, string> \| null>` | iOS, Android |
 | `isSdkDisabled()` | `Promise<boolean>` | iOS, Android |

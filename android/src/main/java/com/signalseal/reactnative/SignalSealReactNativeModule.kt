@@ -142,11 +142,11 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
     }
 
     @ReactMethod
-    fun getInstallationId(promise: Promise) {
+    fun getSignalSealId(promise: Promise) {
         try {
-            promise.resolve(SignalSealAttributionSdk.getInstallationId())
+            promise.resolve(SignalSealAttributionSdk.getSignalSealId())
         } catch (t: Throwable) {
-            promise.reject("GET_INSTALLATION_ID_FAILED", t.message, t)
+            promise.reject("GET_SIGNALSEAL_ID_FAILED", t.message, t)
         }
     }
 

@@ -120,8 +120,8 @@ public final class SignalSealBridge: NSObject {
         resolve(NSNull())
     }
 
-    @objc public func getInstallationId(resolve: @escaping SSResolve, reject: @escaping SSReject) {
-        let id = SignalSealAttributionSdk.shared.getInstallationId()
+    @objc public func getSignalSealId(resolve: @escaping SSResolve, reject: @escaping SSReject) {
+        let id = SignalSealAttributionSdk.shared.getSignalSealId()
         resolve(id as Any? ?? NSNull())
     }
 

@@ -32,7 +32,7 @@ export interface Spec extends TurboModule {
   sendEvent(eventType: string, name?: string, parameters?: { [key: string]: unknown }): void;
   setUserAttributes(attrs: { [key: string]: unknown }): void;
   flush(): Promise<void>;
-  getInstallationId(): Promise<string | null>;
+  getSignalSealId(): Promise<string | null>;
   getIdfv(): Promise<string | null>;
   getAttributionParams(): Promise<{ [key: string]: string } | null>;
   isSdkDisabled(): Promise<boolean>;

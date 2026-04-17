@@ -78,10 +78,10 @@ RCT_EXPORT_METHOD(flush:(RCTPromiseResolveBlock)resolve
   }];
 }
 
-RCT_EXPORT_METHOD(getInstallationId:(RCTPromiseResolveBlock)resolve
+RCT_EXPORT_METHOD(getSignalSealId:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject)
 {
-  [[SignalSealBridge shared] getInstallationIdWithResolve:^(id _Nullable value) {
+  [[SignalSealBridge shared] getSignalSealIdWithResolve:^(id _Nullable value) {
     // Swift returns `NSNull` for the nil-case; RN's bridge converts
     // that to JS `null`. We pass through verbatim.
     resolve(value);

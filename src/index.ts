@@ -173,13 +173,14 @@ export const SignalSealAttributionSdk = {
   },
 
   /**
-   * Returns the persistent installation id (renamed from AppStack's
-   * `getAppstackId`). `null` when the SDK hasn't finished configuring
-   * or has been disabled.
+   * Returns the persistent SignalSeal ID. `null` when the SDK hasn't
+   * finished configuring or has been disabled. (Internally this value
+   * is the `installation_id` — keep that spelling in wire payloads and
+   * DB columns; customers see "SignalSeal ID".)
    */
-  async getInstallationId(): Promise<string | null> {
+  async getSignalSealId(): Promise<string | null> {
     try {
-      return await NativeSignalSeal.getInstallationId();
+      return await NativeSignalSeal.getSignalSealId();
     } catch (err) {
       throw SignalSealError.from(err);
     }

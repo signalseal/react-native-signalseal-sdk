@@ -71,5 +71,5 @@ dependencies {
     //   3) A direct `api(project(":sdk"))` substitution when the RN
     //      bridge is built inside the monorepo alongside the Android
     //      SDK (used by the internal example app).
-    api 'io.github.signalseal:signalseal-android-sdk:0.0.3'
+    api 'io.github.signalseal:signalseal-android-sdk:0.0.4'
 }

@@ -196,12 +196,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
     }
 
     private fun mapLogLevel(raw: String?): LogLevel = when (raw) {
-        // The native Android enum doesn't have `OFF` — the closest
-        // equivalent is silencing at WARN/ERROR. We map `off` to ERROR
-        // so pathological verbosity is still capped without crashing
-        // the SDK (which would happen on an unknown enum lookup).
-        // TODO: if we add `OFF` to the Android LogLevel enum, update.
-        "off" -> LogLevel.ERROR
+        "off" -> LogLevel.OFF
         "error" -> LogLevel.ERROR
         "warn" -> LogLevel.WARN
         "info" -> LogLevel.INFO

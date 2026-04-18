@@ -2234,12 +2234,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "[Swift.String : Any]?",
+                "printedName": "[Swift.String : Swift.String]?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Dictionary",
-                    "printedName": "[Swift.String : Any]",
+                    "printedName": "[Swift.String : Swift.String]",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -2249,8 +2249,9 @@
                       },
                       {
                         "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
                       }
                     ],
                     "usr": "s:SD"
@@ -2260,8 +2261,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:24SignalSealAttributionSDK0abD0C03getC6ParamsSDySSypGSgyYaF",
-            "mangledName": "$s24SignalSealAttributionSDK0abD0C03getC6ParamsSDySSypGSgyYaF",
+            "usr": "s:24SignalSealAttributionSDK0abD0C03getC6ParamsSDyS2SGSgyYaF",
+            "mangledName": "$s24SignalSealAttributionSDK0abD0C03getC6ParamsSDyS2SGSgyYaF",
             "moduleName": "SignalSealAttributionSDK",
             "declAttributes": [
               "Final",
@@ -3927,67 +3928,6 @@
         "children": [
           {
             "kind": "Var",
-            "name": "deeplinkId",
-            "printedName": "deeplinkId",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:24SignalSealAttributionSDK8UserDataV10deeplinkIdSSSgvp",
-            "mangledName": "$s24SignalSealAttributionSDK8UserDataV10deeplinkIdSSSgvp",
-            "moduleName": "SignalSealAttributionSDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:24SignalSealAttributionSDK8UserDataV10deeplinkIdSSSgvg",
-                "mangledName": "$s24SignalSealAttributionSDK8UserDataV10deeplinkIdSSSgvg",
-                "moduleName": "SignalSealAttributionSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "appId",
             "printedName": "appId",
             "children": [
@@ -4675,69 +4615,9 @@
             ]
           },
           {
-            "kind": "Var",
-            "name": "gclid",
-            "printedName": "gclid",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:24SignalSealAttributionSDK8UserDataV5gclidSSSgvp",
-            "mangledName": "$s24SignalSealAttributionSDK8UserDataV5gclidSSSgvp",
-            "moduleName": "SignalSealAttributionSDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:24SignalSealAttributionSDK8UserDataV5gclidSSSgvg",
-                "mangledName": "$s24SignalSealAttributionSDK8UserDataV5gclidSSSgvg",
-                "moduleName": "SignalSealAttributionSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(deeplinkId:appId:redirectionUrl:timestamp:fingerprint:method:url:queryParams:pathParams:cookies:installId:eventType:dateDay:expiresAt:gclid:)",
+            "printedName": "init(appId:redirectionUrl:timestamp:fingerprint:method:url:queryParams:pathParams:cookies:installId:eventType:dateDay:expiresAt:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4747,20 +4627,6 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
@@ -4880,21 +4746,6 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -4913,8 +4764,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:24SignalSealAttributionSDK8UserDataV10deeplinkId03appH014redirectionUrl9timestamp11fingerprint6method3url11queryParams04pathQ07cookies07installH09eventType7dateDay9expiresAt5gclidACSSSg_S6SSDySSAA10AnyCodableVGA2vSS2SA2Stcfc",
-            "mangledName": "$s24SignalSealAttributionSDK8UserDataV10deeplinkId03appH014redirectionUrl9timestamp11fingerprint6method3url11queryParams04pathQ07cookies07installH09eventType7dateDay9expiresAt5gclidACSSSg_S6SSDySSAA10AnyCodableVGA2vSS2SA2Stcfc",
+            "usr": "s:24SignalSealAttributionSDK8UserDataV5appId14redirectionUrl9timestamp11fingerprint6method3url11queryParams04pathP07cookies07installH09eventType7dateDay9expiresAtACSS_S5SSDySSAA10AnyCodableVGA2SSSSgS2SATtcfc",
+            "mangledName": "$s24SignalSealAttributionSDK8UserDataV5appId14redirectionUrl9timestamp11fingerprint6method3url11queryParams04pathP07cookies07installH09eventType7dateDay9expiresAtACSS_S5SSDySSAA10AnyCodableVGA2SSSSgS2SATtcfc",
             "moduleName": "SignalSealAttributionSDK",
             "declAttributes": [
               "AccessControl"
@@ -5747,14 +5598,14 @@
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 17130,
+      "offset": 16632,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 24162,
+      "offset": 23644,
       "length": 5,
       "value": "false"
     },
@@ -5775,210 +5626,189 @@
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 788,
+      "offset": 1308,
       "length": 14,
       "value": "\"trigger_type\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 885,
+      "offset": 1405,
       "length": 10,
       "value": "\"is_debug\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 923,
+      "offset": 1443,
       "length": 14,
       "value": "\"raw_referrer\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 969,
+      "offset": 1489,
       "length": 19,
       "value": "\"referrer_click_ts\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1017,
+      "offset": 1537,
       "length": 16,
       "value": "\"app_install_ts\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1060,
-      "length": 13,
-      "value": "\"deeplink_id\""
-    },
-    {
-      "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
-      "kind": "StringLiteral",
-      "offset": 1591,
+      "offset": 2071,
       "length": 16,
       "value": "\"hardware_model\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1633,
+      "offset": 2113,
       "length": 12,
       "value": "\"os_version\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2359,
+      "offset": 2811,
       "length": 8,
       "value": "\"app_id\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2398,
+      "offset": 2850,
       "length": 17,
       "value": "\"installation_id\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2446,
+      "offset": 2898,
       "length": 18,
       "value": "\"customer_user_id\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2491,
+      "offset": 2943,
       "length": 13,
       "value": "\"sdk_version\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2530,
+      "offset": 2982,
       "length": 12,
       "value": "\"utm_source\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2568,
+      "offset": 3020,
       "length": 12,
       "value": "\"utm_medium\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2608,
+      "offset": 3060,
       "length": 14,
       "value": "\"utm_campaign\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2646,
+      "offset": 3098,
       "length": 10,
       "value": "\"utm_term\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2683,
+      "offset": 3135,
       "length": 13,
       "value": "\"utm_content\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2743,
+      "offset": 3195,
       "length": 14,
       "value": "\"raw_referrer\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2789,
+      "offset": 3241,
       "length": 19,
       "value": "\"referrer_click_ts\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2837,
+      "offset": 3289,
       "length": 16,
       "value": "\"app_install_ts\""
     },
     {
-      "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
-      "kind": "StringLiteral",
-      "offset": 2880,
-      "length": 13,
-      "value": "\"deeplink_id\""
-    },
-    {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/UserData.swift",
       "kind": "StringLiteral",
-      "offset": 1893,
-      "length": 13,
-      "value": "\"deeplink_id\""
-    },
-    {
-      "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/UserData.swift",
-      "kind": "StringLiteral",
-      "offset": 1928,
+      "offset": 1923,
       "length": 8,
       "value": "\"app_id\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/UserData.swift",
       "kind": "StringLiteral",
-      "offset": 1967,
+      "offset": 1962,
       "length": 17,
       "value": "\"redirection_url\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/UserData.swift",
       "kind": "StringLiteral",
-      "offset": 2097,
+      "offset": 2092,
       "length": 14,
       "value": "\"query_params\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/UserData.swift",
       "kind": "StringLiteral",
-      "offset": 2138,
+      "offset": 2133,
       "length": 13,
       "value": "\"path_params\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/UserData.swift",
       "kind": "StringLiteral",
-      "offset": 2198,
+      "offset": 2193,
       "length": 12,
       "value": "\"install_id\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/UserData.swift",
       "kind": "StringLiteral",
-      "offset": 2236,
+      "offset": 2231,
       "length": 12,
       "value": "\"event_type\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/UserData.swift",
       "kind": "StringLiteral",
-      "offset": 2272,
+      "offset": 2267,
       "length": 10,
       "value": "\"date_day\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/UserData.swift",
       "kind": "StringLiteral",
-      "offset": 2308,
+      "offset": 2303,
       "length": 12,
       "value": "\"expires_at\""
     }

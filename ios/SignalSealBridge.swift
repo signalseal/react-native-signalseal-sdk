@@ -6,12 +6,14 @@
 // functions directly; everything here funnels through types Obj-C can
 // see.
 //
-// The public iOS SDK is exposed through the `SignalSealSDK` module
-// (see sdks/ios/Package.swift), which re-exports the underlying
-// `SignalSealAttributionSDK` core. We import the public one only.
+// We import the `SignalSealAttributionSDK` module directly — it's the
+// xcframework vendored inside this package (see the podspec's
+// `vendored_frameworks` entry). No separate public wrapper module is
+// involved; the class we drive is `SignalSealSDK` as declared inside
+// that module.
 
 import Foundation
-import SignalSealSDK
+import SignalSealAttributionSDK
 
 /// Block types — mirror RCTPromiseResolveBlock / RCTPromiseRejectBlock
 /// but typed in Swift so the `@objc` boundary stays clean.
@@ -109,6 +111,10 @@ public final class SignalSealBridge: NSObject {
         SignalSealSDK.shared.enablePurchaseTracking()
     }
 
+    @objc public func resetData() {
+        SignalSealSDK.shared.resetData()
+    }
+
     // MARK: - Promise-returning APIs
 
     @objc public func flush(resolve: @escaping SSResolve, reject: @escaping SSReject) {
@@ -136,18 +142,10 @@ public final class SignalSealBridge: NSObject {
                 resolve(NSNull())
                 return
             }
-            // The TS side coerces values to strings; doing the coercion
-            // here as well is defensive (Obj-C can already pass Any) but
-            // costs nothing and keeps the JS contract explicit.
-            var out: [String: String] = [:]
-            for (k, v) in dict {
-                if let s = v as? String {
-                    out[k] = s
-                } else {
-                    out[k] = String(describing: v)
-                }
-            }
-            resolve(out as NSDictionary)
+            // `dict` is already `[String: String]` — the native SDK
+            // flattens values at source (see 0.0.6 attribution-surface
+            // cleanup). Pass straight through as NSDictionary.
+            resolve(dict as NSDictionary)
         }
     }
 

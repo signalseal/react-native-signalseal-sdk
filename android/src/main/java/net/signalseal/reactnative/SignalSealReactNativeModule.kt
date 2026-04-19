@@ -127,6 +127,11 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
         // Android SDK yet — when it lands, wire it up here.
     }
 
+    @ReactMethod
+    fun resetData() {
+        SignalSealSDK.resetData()
+    }
+
     // --------------------------------------------------------------
     // Promise-returning methods
     // --------------------------------------------------------------

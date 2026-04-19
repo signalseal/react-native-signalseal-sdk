@@ -32,6 +32,7 @@ export interface Spec extends TurboModule {
   sendEvent(eventType: string, name?: string, parameters?: { [key: string]: unknown }): void;
   setUserAttributes(attrs: { [key: string]: unknown }): void;
   flush(): Promise<void>;
+  resetData(): void;
   getSignalSealId(): Promise<string | null>;
   getAttributionParams(): Promise<{ [key: string]: string } | null>;
   isSdkDisabled(): Promise<boolean>;
@@ -43,6 +44,12 @@ export interface Spec extends TurboModule {
  * Module name registered by both native platforms:
  *   iOS:     `RCT_EXPORT_MODULE(SignalSealReactNative)`
  *   Android: `override fun getName() = "SignalSealReactNative"`
+ *
+ * NOTE: RN's codegen parser requires the name to appear as a STRING
+ * LITERAL in the `getEnforcing<Spec>(...)` call below — it refuses to
+ * resolve identifiers even when they're `const`-declared in the same
+ * file. Keep this constant for the old-arch `NativeModules` fallback
+ * but inline the literal at the turbo-registry call.
  */
 const MODULE_NAME = 'SignalSealReactNative';
 
@@ -61,7 +68,9 @@ let nativeSpec: Spec;
 try {
   // `TurboModuleRegistry` is guaranteed on RN 0.68+, but `getEnforcing`
   // only succeeds when the new architecture is actually on.
-  nativeSpec = TurboModuleRegistry.getEnforcing<Spec>(MODULE_NAME);
+  // The string literal here MUST match MODULE_NAME — codegen's parser
+  // refuses identifiers.
+  nativeSpec = TurboModuleRegistry.getEnforcing<Spec>('SignalSealReactNative');
 } catch {
   const fallback = (NativeModules as Record<string, unknown>)[MODULE_NAME] as Spec | undefined;
   if (!fallback) {

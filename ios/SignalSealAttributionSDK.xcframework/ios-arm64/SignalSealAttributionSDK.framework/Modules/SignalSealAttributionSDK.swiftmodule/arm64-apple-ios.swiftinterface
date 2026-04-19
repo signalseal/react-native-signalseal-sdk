@@ -5,11 +5,11 @@
 import AdServices
 import AdSupport
 import AppTrackingTransparency
-import Darwin
 import Foundation
 import StoreKit
 import Swift
 import UIKit
+import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
@@ -78,6 +78,7 @@ final public class SignalSealASAAttribution : @unchecked Swift.Sendable {
   public static let shared: SignalSealAttributionSDK.SignalSealSDK
   final public func configure(apiKey: Swift.String, isDebug: Swift.Bool = false, endpointBaseUrl: Swift.String? = nil, logLevel: SignalSealAttributionSDK.LogLevel = .info, customerUserId: Swift.String? = nil)
   final public func sendEvent(event: SignalSealAttributionSDK.EventType, name: Swift.String? = nil, parameters: [Swift.String : Any]? = nil)
+  final public func resetData()
   final public func setUserAttributes(_ attrs: SignalSealAttributionSDK.UserAttributes)
   final public func enablePurchaseTracking()
   final public func getSignalSealId() -> Swift.String?

@@ -64,6 +64,11 @@ RCT_EXPORT_METHOD(enablePurchaseTracking)
   [[SignalSealBridge shared] enablePurchaseTracking];
 }
 
+RCT_EXPORT_METHOD(resetData)
+{
+  [[SignalSealBridge shared] resetData];
+}
+
 #pragma mark - Promise-returning methods
 
 RCT_EXPORT_METHOD(flush:(RCTPromiseResolveBlock)resolve

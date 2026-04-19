@@ -173,6 +173,21 @@ export const SignalSealSDK = {
   },
 
   /**
+   * Wipe all SDK-generated local state — installation id, cached match
+   * response, event queue, install-sent flag, customer user id, etc. The
+   * SDK then re-runs the post-configure flow: mints a fresh installation
+   * id, refires `/match`, and re-emits the INSTALL event.
+   *
+   * Caller-supplied configure() args (apiKey, endpointBaseUrl, isDebug)
+   * stay intact — there's no need to call configure() again.
+   *
+   * Use cases: end-user logout / "forget me" flows, local QA reset.
+   */
+  resetData(): void {
+    NativeSignalSeal.resetData();
+  },
+
+  /**
    * Returns the persistent SignalSeal ID. `null` when the SDK hasn't
    * finished configuring or has been disabled. (Internally this value
    * is the `installation_id` — keep that spelling in wire payloads and

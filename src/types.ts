@@ -80,13 +80,14 @@ export interface UserAttributes {
 }
 
 /**
- * Shape returned by {@link SignalSealSDK.getAttributionParams}.
+ * Shape returned by {@link SignalSealSDK.getAttributionParams}. Flat
+ * string→string map mixing normalized `signalseal_*` keys with raw
+ * ad-network click IDs. See the method docstring for the full key list.
  *
- * iOS returns a broader set (deeplink_id, gclid, install_id, method, url,
- * timestamp, event_type, redirection_url) as `Record<string, any>`;
- * Android returns a flat `Record<string, string>`. We type the JS surface
- * as `Record<string, string>` to stay portable — values are coerced to
- * strings at the native boundary where needed.
+ * Values cross the native bridge and are coerced to string in the TS
+ * facade — iOS internally returns `Any` (NSNumber for timestamps) and
+ * Android returns `String` directly; stringification here keeps the JS
+ * surface portable.
  */
 export type AttributionParams = Record<string, string>;
 

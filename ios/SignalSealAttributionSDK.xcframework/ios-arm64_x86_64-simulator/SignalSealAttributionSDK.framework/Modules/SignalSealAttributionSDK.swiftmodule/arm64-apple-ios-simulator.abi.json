@@ -4964,7 +4964,7 @@
       "kind": "StringLiteral",
       "offset": 253,
       "length": 8,
-      "value": "\"0.0.10\""
+      "value": "\"0.0.12\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
@@ -5648,14 +5648,14 @@
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 24624,
+      "offset": 25356,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 33503,
+      "offset": 34235,
       "length": 5,
       "value": "false"
     },

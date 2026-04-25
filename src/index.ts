@@ -207,18 +207,20 @@ export const SignalSealSDK = {
    * (bounded by the match timeout); on Android it returns cached values
    * synchronously.
    *
-   * Shape: flat `Record<string, string>` with two families of keys:
-   *   - Normalized cross-network: `signalseal_id`, `signalseal_adnetwork`
-   *     (`google`|`meta`|`tiktok`), `signalseal_media_source`,
-   *     `signalseal_campaign_id`, `signalseal_campaign_name`,
-   *     `signalseal_adgroup_id`, `signalseal_adgroup_name`,
-   *     `signalseal_ad_id`, `signalseal_ad_name`, `signalseal_placement`,
-   *     `signalseal_keyword`.
+   * Shape: flat `Record<string, string>` with three families of keys:
+   *   - Always present: `signalseal_id` (the local installation id, same
+   *     value as `getSignalSealId()`).
+   *   - Click-time, set when the install matched a tracked link:
+   *     `deeplink_id`, `signalseal_adnetwork` (`google`|`meta`|`tiktok`),
+   *     `signalseal_media_source`, `signalseal_campaign_id`,
+   *     `signalseal_campaign_name`, `signalseal_adgroup_id`,
+   *     `signalseal_adgroup_name`, `signalseal_ad_id`, `signalseal_ad_name`,
+   *     `signalseal_placement`, `signalseal_keyword`.
    *   - Raw ad-network click IDs (verbatim): `gclid`, `gbraid`, `wbraid`,
    *     `fbclid`, `fbp`, `ttclid`.
    *
-   * Empty object → organic install. Use `signalseal_*` keys for
-   * cross-network logic; use the raw click IDs for S2S / MMP / vendor
+   * `{ signalseal_id }` alone → organic install. Use `signalseal_*` keys
+   * for cross-network logic; use the raw click IDs for S2S / MMP / vendor
    * postback correlation.
    */
   async getAttributionParams(): Promise<AttributionParams | null> {

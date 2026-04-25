@@ -106,19 +106,11 @@ public struct UserAttributes : Swift.Sendable, Swift.Equatable {
 }
 public struct UserData : Swift.Codable, Swift.Sendable {
   public let appId: Swift.String
-  public let redirectionUrl: Swift.String
   public let timestamp: Swift.String
-  public let fingerprint: Swift.String
   public let method: Swift.String
-  public let url: Swift.String
   public let queryParams: [Swift.String : SignalSealAttributionSDK.AnyCodable]
-  public let pathParams: [Swift.String : SignalSealAttributionSDK.AnyCodable]
-  public let cookies: [Swift.String : SignalSealAttributionSDK.AnyCodable]
   public let installId: Swift.String?
-  public let eventType: Swift.String
-  public let dateDay: Swift.String
-  public let expiresAt: Swift.String?
-  public init(appId: Swift.String, redirectionUrl: Swift.String, timestamp: Swift.String, fingerprint: Swift.String, method: Swift.String, url: Swift.String, queryParams: [Swift.String : SignalSealAttributionSDK.AnyCodable], pathParams: [Swift.String : SignalSealAttributionSDK.AnyCodable], cookies: [Swift.String : SignalSealAttributionSDK.AnyCodable], installId: Swift.String?, eventType: Swift.String, dateDay: Swift.String, expiresAt: Swift.String? = nil)
+  public init(appId: Swift.String, timestamp: Swift.String, method: Swift.String, queryParams: [Swift.String : SignalSealAttributionSDK.AnyCodable], installId: Swift.String?)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }

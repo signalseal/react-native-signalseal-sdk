@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   s.swift_version = "5.9"
   s.requires_arc = true
 
-  s.source_files = "ios/**/*.{h,m,mm,swift}"
-  s.public_header_files = "ios/**/*.h"
+  s.source_files = "ios/*.{h,m,mm,swift}"
+  s.public_header_files = "ios/*.h"
 
   # Vendor the precompiled iOS SDK xcframework directly inside the RN
   # package. Consumers run `pod install` and get everything in one step —

@@ -78,8 +78,16 @@ RCT_EXPORT_METHOD(resetData)
 
 #pragma mark - Promise-returning methods
 
+// Selector convention: `methodName:reject:` (NOT `methodName:rejecter:`).
+// On new arch (TurboModule), codegen generates the spec with `reject:`
+// as the second selector part — using `rejecter:` here would register
+// `methodName:rejecter:` and JSI would hit "unrecognized selector" at
+// runtime when JS calls the Promise method. On old arch the bridge
+// dispatches by reflection and accepts either, so `reject:` works for
+// both.
+
 RCT_EXPORT_METHOD(flush:(RCTPromiseResolveBlock)resolve
-                  rejecter:(RCTPromiseRejectBlock)reject)
+                  reject:(RCTPromiseRejectBlock)reject)
 {
   [[SignalSealBridge shared] flushWithResolve:^(id _Nullable value) {
     resolve(value);
@@ -89,7 +97,7 @@ RCT_EXPORT_METHOD(flush:(RCTPromiseResolveBlock)resolve
 }
 
 RCT_EXPORT_METHOD(getSignalSealId:(RCTPromiseResolveBlock)resolve
-                  rejecter:(RCTPromiseRejectBlock)reject)
+                  reject:(RCTPromiseRejectBlock)reject)
 {
   [[SignalSealBridge shared] getSignalSealIdWithResolve:^(id _Nullable value) {
     // Swift returns `NSNull` for the nil-case; RN's bridge converts
@@ -101,7 +109,7 @@ RCT_EXPORT_METHOD(getSignalSealId:(RCTPromiseResolveBlock)resolve
 }
 
 RCT_EXPORT_METHOD(getAttributionParams:(RCTPromiseResolveBlock)resolve
-                  rejecter:(RCTPromiseRejectBlock)reject)
+                  reject:(RCTPromiseRejectBlock)reject)
 {
   [[SignalSealBridge shared] getAttributionParamsWithResolve:^(id _Nullable value) {
     resolve(value);
@@ -111,7 +119,7 @@ RCT_EXPORT_METHOD(getAttributionParams:(RCTPromiseResolveBlock)resolve
 }
 
 RCT_EXPORT_METHOD(isSdkDisabled:(RCTPromiseResolveBlock)resolve
-                  rejecter:(RCTPromiseRejectBlock)reject)
+                  reject:(RCTPromiseRejectBlock)reject)
 {
   [[SignalSealBridge shared] isSdkDisabledWithResolve:^(id _Nullable value) {
     resolve(value);

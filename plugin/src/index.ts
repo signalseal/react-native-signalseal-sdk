@@ -8,8 +8,7 @@
 //
 //   - Android: our manifest merges INTERNET, ACCESS_NETWORK_STATE, and
 //     AD_ID from the SDK AAR. Nothing to inject. The plugin still exists
-//     as the forward-compatible hook for future needs (e.g., BGTaskScheduler
-//     identifiers, AndroidX permissions if the SDK ever grows them).
+//     as the forward-compatible hook for future needs.
 //
 // Usage in the consuming app's `app.json` / `app.config.ts`:
 //

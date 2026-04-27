@@ -45,13 +45,15 @@ public final class SignalSealBridge: NSObject {
         let endpointBaseUrl = args["endpointBaseUrl"] as? String
         let customerUserId = args["customerUserId"] as? String
         let level = mapLogLevel(args["logLevel"] as? String)
+        let environment = mapEnvironment(args["environment"] as? String)
 
         SignalSealSDK.shared.configure(
             apiKey: apiKey,
             isDebug: isDebug,
             endpointBaseUrl: endpointBaseUrl,
             logLevel: level,
-            customerUserId: customerUserId
+            customerUserId: customerUserId,
+            environment: environment
         )
     }
 
@@ -63,6 +65,19 @@ public final class SignalSealBridge: NSObject {
         case "info": return .info
         case "debug": return .debug
         default: return .info
+        }
+    }
+
+    /// Map the JS-side lowercase environment string to the native enum.
+    /// Returns `nil` when the value is absent or unrecognized — the
+    /// native SDK then auto-detects. The TS facade rejects unrecognized
+    /// values, so getting here with a bad value means a direct
+    /// NativeModules call bypassed validation.
+    private func mapEnvironment(_ raw: String?) -> SignalSealEnvironment? {
+        switch raw {
+        case "production": return .production
+        case "sandbox": return .sandbox
+        default: return nil
         }
     }
 

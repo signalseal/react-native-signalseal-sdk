@@ -1,6 +1,6 @@
 {
   "name": "@signalseal/react-native",
-  "version": "0.0.14",
+  "version": "0.1.0",
   "description": "SignalSeal React Native bridge — thin marshalling layer over the native iOS and Android SDKs.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -36,16 +36,16 @@
   "license": "MIT",
   "peerDependencies": {
     "react": "*",
-    "react-native": ">=0.71.0"
+    "react-native": ">=0.74.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.0",
     "react": "18.2.0",
-    "react-native": "0.73.0",
+    "react-native": "0.74.0",
     "typescript": "^5.8.3"
   },
   "codegenConfig": {
-    "name": "SignalSealReactNativeSpec",
+    "name": "NativeSignalSealSpec",
     "type": "modules",
     "jsSrcsDir": "src",
     "android": {

@@ -3,9 +3,8 @@ package net.signalseal.reactnative
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import com.facebook.react.bridge.ReactContextBaseJavaModule
-import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
+import com.facebook.react.module.annotations.ReactModule
 import net.signalseal.attribution.EventType
 import net.signalseal.attribution.LogLevel
 import net.signalseal.attribution.SignalSealSDK
@@ -14,33 +13,33 @@ import net.signalseal.attribution.UserAttributes
 /**
  * React Native bridge module for the SignalSeal Android SDK.
  *
- * Old-architecture compatible (`ReactContextBaseJavaModule` + @ReactMethod).
- * New-arch apps pick this up via the autolinked ReactPackage; codegen
- * isn't involved on the Android side in v0 — we accept the
- * small perf overhead of the legacy bridge in exchange for trivially
- * working on every supported RN version (>= 0.71) without per-arch
- * build flags.
+ * Extends the codegen-generated `NativeSignalSealSpec` so the same class
+ * works on both architectures: on new-arch hosts, RNGP wires this up
+ * as a real TurboModule (JSI-direct, no bridge hop); on old-arch hosts,
+ * the spec class still extends `ReactContextBaseJavaModule` so the
+ * legacy bridge dispatches to these overrides via reflection.
+ *
+ * Method signatures must match the codegen output exactly. The TS spec
+ * lives at `src/NativeSignalSeal.ts` and `package.json#codegenConfig.name`
+ * (`NativeSignalSealSpec`) controls the generated class name.
  *
  * Bridging rules:
  *   - Fire-and-forget calls (`configure`, `sendEvent`, setters) take no
- *     Promise argument — RN's bridge runs them on the module's queue
- *     (the default `NativeModulesQueueThread`) and drops exceptions
- *     into the JS console.
- *   - Promise-returning calls use RN's `Promise` type; rejections are
- *     wrapped into `SignalSealError` on the JS side via the error's
- *     `.code` field.
+ *     Promise argument; exceptions surface as JS console errors.
+ *   - Promise-returning calls reject with a code+message that the TS
+ *     facade wraps into `SignalSealError` via the error's `.code` field.
  */
+@ReactModule(name = SignalSealReactNativeModule.NAME)
 class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
-    ReactContextBaseJavaModule(reactContext) {
+    NativeSignalSealSpec(reactContext) {
 
-    override fun getName(): String = MODULE_NAME
+    override fun getName(): String = NAME
 
     // --------------------------------------------------------------
     // Fire-and-forget methods
     // --------------------------------------------------------------
 
-    @ReactMethod
-    fun configure(args: ReadableMap) {
+    override fun configure(args: ReadableMap) {
         val apiKey = args.getStringSafe("apiKey") ?: run {
             // TS facade already enforces apiKey presence. If it still
             // arrived empty, swallow silently — the native SDK also
@@ -56,9 +55,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
         // Kotlin-level overload; when unset we fall back to the SDK's
         // documented default. Matching the iOS behaviour (where `nil`
         // means "use SDK default"), we call the no-endpoint overload
-        // by explicitly passing the default constant through reflection
-        // isn't necessary — the `@JvmOverloads` on `configure` exposes
-        // a variant without `endpointBaseUrl`, so we branch.
+        // via the `@JvmOverloads` variant.
         if (endpointBaseUrl != null) {
             SignalSealSDK.configure(
                 context = reactApplicationContext,
@@ -79,8 +76,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
         }
     }
 
-    @ReactMethod
-    fun sendEvent(eventType: String, name: String?, parameters: ReadableMap?) {
+    override fun sendEvent(eventType: String, name: String?, parameters: ReadableMap?) {
         val type = runCatching { EventType.valueOf(eventType) }.getOrElse {
             // TS facade already validates — getting here means the
             // caller bypassed the facade (bare NativeModules call?). We
@@ -101,8 +97,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
         )
     }
 
-    @ReactMethod
-    fun setUserAttributes(attrs: ReadableMap) {
+    override fun setUserAttributes(attrs: ReadableMap) {
         // The TS facade writes snake_case keys; reconstruct the typed
         // `UserAttributes` data class from them. Extras are ignored.
         val ua = UserAttributes(
@@ -121,20 +116,17 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
         SignalSealSDK.setUserAttributes(ua)
     }
 
-    @ReactMethod
-    fun enableAppleAdsAttribution() {
+    override fun enableAppleAdsAttribution() {
         // iOS-only API. No-op on Android; the TS facade short-circuits
         // before getting here, but we guard against direct native calls.
     }
 
-    @ReactMethod
-    fun enablePurchaseTracking() {
+    override fun enablePurchaseTracking() {
         // iOS-only. Play Billing tracking isn't in the public
         // Android SDK yet — when it lands, wire it up here.
     }
 
-    @ReactMethod
-    fun resetData() {
+    override fun resetData() {
         SignalSealSDK.resetData()
     }
 
@@ -142,8 +134,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
     // Promise-returning methods
     // --------------------------------------------------------------
 
-    @ReactMethod
-    fun flush(promise: Promise) {
+    override fun flush(promise: Promise) {
         try {
             SignalSealSDK.flush()
             promise.resolve(null)
@@ -152,8 +143,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
         }
     }
 
-    @ReactMethod
-    fun getSignalSealId(promise: Promise) {
+    override fun getSignalSealId(promise: Promise) {
         try {
             promise.resolve(SignalSealSDK.getSignalSealId())
         } catch (t: Throwable) {
@@ -161,8 +151,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
         }
     }
 
-    @ReactMethod
-    fun getAttributionParams(promise: Promise) {
+    override fun getAttributionParams(promise: Promise) {
         try {
             val map = SignalSealSDK.getAttributionParams()
             if (map.isEmpty()) {
@@ -182,8 +171,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
         }
     }
 
-    @ReactMethod
-    fun isSdkDisabled(promise: Promise) {
+    override fun isSdkDisabled(promise: Promise) {
         try {
             promise.resolve(SignalSealSDK.isSdkDisabled())
         } catch (t: Throwable) {
@@ -216,6 +204,6 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
     }
 
     companion object {
-        const val MODULE_NAME = "SignalSealReactNative"
+        const val NAME = "SignalSealReactNative"
     }
 }

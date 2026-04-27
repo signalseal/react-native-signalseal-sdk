@@ -113,5 +113,20 @@ RCT_EXPORT_METHOD(isSdkDisabled:(RCTPromiseResolveBlock)resolve
   }];
 }
 
+#pragma mark - New architecture (TurboModule)
+
+#ifdef RCT_NEW_ARCH_ENABLED
+// JSI plumbing for new arch. The codegen-generated `NativeSignalSealSpecJSI`
+// wraps our protocol implementation so RN's TurboModuleRegistry can call
+// us directly from JS without going through the legacy bridge. The
+// method bodies above (declared via `RCT_EXPORT_METHOD`) satisfy the
+// `<NativeSignalSealSpec>` protocol because we kept loose
+// `NSDictionary *` arg types — see `ios/SignalSealReactNative.h`.
+- (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
+    (const facebook::react::ObjCTurboModule::InitParams &)params
+{
+  return std::make_shared<facebook::react::NativeSignalSealSpecJSI>(params);
+}
+#endif
 
 @end

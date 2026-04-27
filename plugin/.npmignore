@@ -1,0 +1,5 @@
+# Empty by design. Without this, npm falls back to plugin/.gitignore,
+# which excludes `build` (the compiled Expo plugin output) and breaks
+# `app.plugin.js`'s `require('./plugin/build')` for installed copies.
+# An empty .npmignore lets the root `files: ["plugin/build"]` filter
+# in package.json actually take effect.

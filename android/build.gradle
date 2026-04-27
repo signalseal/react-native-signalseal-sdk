@@ -96,5 +96,5 @@ dependencies {
     // RN package — the bridge code references native types that may not
     // exist in older SDK versions (e.g., `SignalSealEnvironment` was
     // added in 0.2.0).
-    api 'io.github.signalseal:signalseal-android-sdk:0.2.0'
+    api 'io.github.signalseal:signalseal-android-sdk:0.2.4'
 }

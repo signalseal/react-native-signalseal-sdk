@@ -31,6 +31,20 @@ export enum EventType {
 export type LogLevel = 'off' | 'error' | 'warn' | 'info' | 'debug';
 
 /**
+ * Build environment override for {@link ConfigureArgs.environment}.
+ * Values match the wire format the server expects.
+ *
+ * Both native SDKs auto-detect (iOS: simulator + debugger + receipt
+ * URL; Android: FLAG_DEBUGGABLE + emulator heuristics). Pass this
+ * value to `configure()` only when the auto-detection misses your
+ * build context — typically:
+ *   - iOS: ad-hoc / enterprise / custom QA distributions
+ *   - Android: Google Play internal/closed/open testing tracks
+ *     (release builds with `debuggable=false` shipped via Play Console)
+ */
+export type Environment = 'production' | 'sandbox';
+
+/**
  * Arguments accepted by {@link SignalSealSDK.configure}. All
  * fields except `apiKey` are optional — the native SDKs own the defaults
  * (endpoint, log level, debug). The bridge does NOT hardcode defaults.
@@ -50,6 +64,12 @@ export interface ConfigureArgs {
   logLevel?: LogLevel;
   /** Stable host-app user id. Recommended for multi-device identity. */
   customerUserId?: string;
+  /**
+   * Override the auto-detected build environment. Leave unset and the
+   * native SDKs will infer it. See {@link Environment} for when to
+   * pass this explicitly.
+   */
+  environment?: Environment;
 }
 
 /**
@@ -100,6 +120,7 @@ export type SignalSealErrorCode =
   | 'INVALID_LOG_LEVEL'
   | 'INVALID_ENDPOINT'
   | 'INVALID_EVENT_TYPE'
+  | 'INVALID_ENVIRONMENT'
   | 'CONFIGURE_FAILED'
   | 'EVENT_SEND_ERROR'
   | 'NATIVE_ERROR'

@@ -4,6 +4,7 @@ import { SignalSealError } from './errors';
 import type {
   AttributionParams,
   ConfigureArgs,
+  Environment,
   LogLevel,
   UserAttributes,
 } from './types';
@@ -14,6 +15,7 @@ export { SignalSealError };
 export type {
   AttributionParams,
   ConfigureArgs,
+  Environment,
   LogLevel,
   UserAttributes,
   SignalSealErrorCode,
@@ -49,6 +51,11 @@ const VALID_LOG_LEVELS: ReadonlySet<LogLevel> = new Set<LogLevel>([
   'warn',
   'info',
   'debug',
+]);
+
+const VALID_ENVIRONMENTS: ReadonlySet<Environment> = new Set<Environment>([
+  'production',
+  'sandbox',
 ]);
 
 /**
@@ -89,6 +96,12 @@ export const SignalSealSDK = {
         throw new SignalSealError('INVALID_ENDPOINT', 'endpointBaseUrl must be a non-empty string when provided');
       }
     }
+    if (args.environment !== undefined && !VALID_ENVIRONMENTS.has(args.environment)) {
+      throw new SignalSealError(
+        'INVALID_ENVIRONMENT',
+        `environment must be one of: production | sandbox (got "${String(args.environment)}")`,
+      );
+    }
 
     // Build a minimal payload — we deliberately omit undefined fields so
     // the native layer sees `null`/absent rather than a string `"undefined"`.
@@ -98,6 +111,7 @@ export const SignalSealSDK = {
       endpointBaseUrl?: string;
       logLevel?: string;
       customerUserId?: string;
+      environment?: string;
     } = { apiKey: args.apiKey };
     if (args.isDebug !== undefined) payload.isDebug = !!args.isDebug;
     if (args.endpointBaseUrl !== undefined) payload.endpointBaseUrl = args.endpointBaseUrl;
@@ -105,6 +119,7 @@ export const SignalSealSDK = {
     if (args.customerUserId !== undefined && args.customerUserId !== null) {
       payload.customerUserId = String(args.customerUserId);
     }
+    if (args.environment !== undefined) payload.environment = args.environment;
 
     NativeSignalSeal.configure(payload);
   },

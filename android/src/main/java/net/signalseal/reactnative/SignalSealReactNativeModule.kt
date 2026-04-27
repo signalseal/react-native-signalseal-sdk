@@ -9,6 +9,7 @@ import net.signalseal.attribution.EventType
 import net.signalseal.attribution.LogLevel
 import net.signalseal.attribution.SignalSealSDK
 import net.signalseal.attribution.UserAttributes
+import net.signalseal.attribution.events.SignalSealEnvironment
 
 /**
  * React Native bridge module for the SignalSeal Android SDK.
@@ -50,6 +51,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
         val endpointBaseUrl = args.getStringSafe("endpointBaseUrl")
         val customerUserId = args.getStringSafe("customerUserId")
         val logLevel = mapLogLevel(args.getStringSafe("logLevel"))
+        val environment = mapEnvironment(args.getStringSafe("environment"))
 
         // The Android SDK requires a non-null `endpointBaseUrl` at the
         // Kotlin-level overload; when unset we fall back to the SDK's
@@ -64,6 +66,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
                 endpointBaseUrl = endpointBaseUrl,
                 logLevel = logLevel,
                 customerUserId = customerUserId,
+                environment = environment,
             )
         } else {
             SignalSealSDK.configure(
@@ -72,6 +75,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
                 isDebug = isDebug,
                 logLevel = logLevel,
                 customerUserId = customerUserId,
+                environment = environment,
             )
         }
     }
@@ -201,6 +205,20 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
         "info" -> LogLevel.INFO
         "debug" -> LogLevel.DEBUG
         else -> LogLevel.INFO
+    }
+
+    /**
+     * Map the JS-side lowercase environment string to the native enum.
+     * Returns `null` when the value is absent or unrecognized — the
+     * native SDK then auto-detects via `FLAG_DEBUGGABLE` + emulator
+     * heuristics. The TS facade rejects unrecognized values, so getting
+     * here with a bad value means a direct `NativeModules` call
+     * bypassed validation.
+     */
+    private fun mapEnvironment(raw: String?): SignalSealEnvironment? = when (raw) {
+        "production" -> SignalSealEnvironment.PRODUCTION
+        "sandbox" -> SignalSealEnvironment.SANDBOX
+        else -> null
     }
 
     companion object {

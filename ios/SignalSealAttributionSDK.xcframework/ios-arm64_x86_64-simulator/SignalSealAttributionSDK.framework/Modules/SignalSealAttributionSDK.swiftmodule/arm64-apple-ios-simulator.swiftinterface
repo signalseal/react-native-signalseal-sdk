@@ -5,6 +5,7 @@
 import AdServices
 import AdSupport
 import AppTrackingTransparency
+import Darwin
 import Foundation
 import StoreKit
 import Swift
@@ -19,6 +20,16 @@ public struct AnyCodable : Swift.Codable, @unchecked Swift.Sendable {
   public init(_ value: Any)
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
+}
+public enum SignalSealEnvironment : Swift.String {
+  case production
+  case sandbox
+  public static func detect(bundle: Foundation.Bundle = .main) -> SignalSealAttributionSDK.SignalSealEnvironment
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 public enum EventType : Swift.String, Swift.CaseIterable, Swift.Sendable {
   case install
@@ -76,7 +87,7 @@ final public class SignalSealASAAttribution : @unchecked Swift.Sendable {
 }
 @_hasMissingDesignatedInitializers final public class SignalSealSDK : @unchecked Swift.Sendable {
   public static let shared: SignalSealAttributionSDK.SignalSealSDK
-  final public func configure(apiKey: Swift.String, isDebug: Swift.Bool = false, endpointBaseUrl: Swift.String? = nil, logLevel: SignalSealAttributionSDK.LogLevel = .info, customerUserId: Swift.String? = nil)
+  final public func configure(apiKey: Swift.String, isDebug: Swift.Bool = false, endpointBaseUrl: Swift.String? = nil, logLevel: SignalSealAttributionSDK.LogLevel = .info, customerUserId: Swift.String? = nil, environment: SignalSealAttributionSDK.SignalSealEnvironment? = nil)
   final public func sendEvent(event: SignalSealAttributionSDK.EventType, name: Swift.String? = nil, parameters: [Swift.String : Any]? = nil)
   final public func resetData()
   final public func setUserAttributes(_ attrs: SignalSealAttributionSDK.UserAttributes)
@@ -114,6 +125,9 @@ public struct UserData : Swift.Codable, Swift.Sendable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+extension SignalSealAttributionSDK.SignalSealEnvironment : Swift.Equatable {}
+extension SignalSealAttributionSDK.SignalSealEnvironment : Swift.Hashable {}
+extension SignalSealAttributionSDK.SignalSealEnvironment : Swift.RawRepresentable {}
 extension SignalSealAttributionSDK.EventType : Swift.Equatable {}
 extension SignalSealAttributionSDK.EventType : Swift.Hashable {}
 extension SignalSealAttributionSDK.EventType : Swift.RawRepresentable {}

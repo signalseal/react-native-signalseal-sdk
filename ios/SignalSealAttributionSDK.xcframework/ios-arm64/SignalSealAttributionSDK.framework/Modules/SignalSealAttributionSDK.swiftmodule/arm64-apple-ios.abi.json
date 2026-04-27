@@ -293,6 +293,264 @@
       },
       {
         "kind": "Import",
+        "name": "Darwin",
+        "printedName": "Darwin",
+        "declKind": "Import",
+        "moduleName": "SignalSealAttributionSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SignalSealEnvironment",
+        "printedName": "SignalSealEnvironment",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "production",
+            "printedName": "production",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SignalSealAttributionSDK.SignalSealEnvironment.Type) -> SignalSealAttributionSDK.SignalSealEnvironment",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SignalSealEnvironment",
+                    "printedName": "SignalSealAttributionSDK.SignalSealEnvironment",
+                    "usr": "s:24SignalSealAttributionSDK0aB11EnvironmentO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SignalSealAttributionSDK.SignalSealEnvironment.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SignalSealEnvironment",
+                        "printedName": "SignalSealAttributionSDK.SignalSealEnvironment",
+                        "usr": "s:24SignalSealAttributionSDK0aB11EnvironmentO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:24SignalSealAttributionSDK0aB11EnvironmentO10productionyA2CmF",
+            "mangledName": "$s24SignalSealAttributionSDK0aB11EnvironmentO10productionyA2CmF",
+            "moduleName": "SignalSealAttributionSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "sandbox",
+            "printedName": "sandbox",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SignalSealAttributionSDK.SignalSealEnvironment.Type) -> SignalSealAttributionSDK.SignalSealEnvironment",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SignalSealEnvironment",
+                    "printedName": "SignalSealAttributionSDK.SignalSealEnvironment",
+                    "usr": "s:24SignalSealAttributionSDK0aB11EnvironmentO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SignalSealAttributionSDK.SignalSealEnvironment.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SignalSealEnvironment",
+                        "printedName": "SignalSealAttributionSDK.SignalSealEnvironment",
+                        "usr": "s:24SignalSealAttributionSDK0aB11EnvironmentO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:24SignalSealAttributionSDK0aB11EnvironmentO7sandboxyA2CmF",
+            "mangledName": "$s24SignalSealAttributionSDK0aB11EnvironmentO7sandboxyA2CmF",
+            "moduleName": "SignalSealAttributionSDK"
+          },
+          {
+            "kind": "Function",
+            "name": "detect",
+            "printedName": "detect(bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SignalSealEnvironment",
+                "printedName": "SignalSealAttributionSDK.SignalSealEnvironment",
+                "usr": "s:24SignalSealAttributionSDK0aB11EnvironmentO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bundle",
+                "printedName": "Foundation.Bundle",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)NSBundle"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:24SignalSealAttributionSDK0aB11EnvironmentO6detect6bundleACSo8NSBundleC_tFZ",
+            "mangledName": "$s24SignalSealAttributionSDK0aB11EnvironmentO6detect6bundleACSo8NSBundleC_tFZ",
+            "moduleName": "SignalSealAttributionSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SignalSealAttributionSDK.SignalSealEnvironment?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SignalSealEnvironment",
+                    "printedName": "SignalSealAttributionSDK.SignalSealEnvironment",
+                    "usr": "s:24SignalSealAttributionSDK0aB11EnvironmentO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:24SignalSealAttributionSDK0aB11EnvironmentO8rawValueACSgSS_tcfc",
+            "mangledName": "$s24SignalSealAttributionSDK0aB11EnvironmentO8rawValueACSgSS_tcfc",
+            "moduleName": "SignalSealAttributionSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:24SignalSealAttributionSDK0aB11EnvironmentO8rawValueSSvp",
+            "mangledName": "$s24SignalSealAttributionSDK0aB11EnvironmentO8rawValueSSvp",
+            "moduleName": "SignalSealAttributionSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:24SignalSealAttributionSDK0aB11EnvironmentO8rawValueSSvg",
+                "mangledName": "$s24SignalSealAttributionSDK0aB11EnvironmentO8rawValueSSvg",
+                "moduleName": "SignalSealAttributionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:24SignalSealAttributionSDK0aB11EnvironmentO",
+        "mangledName": "$s24SignalSealAttributionSDK0aB11EnvironmentO",
+        "moduleName": "SignalSealAttributionSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SignalSealAttributionSDK"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -1982,7 +2240,7 @@
           {
             "kind": "Function",
             "name": "configure",
-            "printedName": "configure(apiKey:isDebug:endpointBaseUrl:logLevel:customerUserId:)",
+            "printedName": "configure(apiKey:isDebug:endpointBaseUrl:logLevel:customerUserId:environment:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2038,11 +2296,26 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SignalSealAttributionSDK.SignalSealEnvironment?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SignalSealEnvironment",
+                    "printedName": "SignalSealAttributionSDK.SignalSealEnvironment",
+                    "usr": "s:24SignalSealAttributionSDK0aB11EnvironmentO"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:24SignalSealAttributionSDK0abD0C9configure6apiKey7isDebug15endpointBaseUrl8logLevel14customerUserIdySS_SbSSSgAA03LogN0OAJtF",
-            "mangledName": "$s24SignalSealAttributionSDK0abD0C9configure6apiKey7isDebug15endpointBaseUrl8logLevel14customerUserIdySS_SbSSSgAA03LogN0OAJtF",
+            "usr": "s:24SignalSealAttributionSDK0abD0C9configure6apiKey7isDebug15endpointBaseUrl8logLevel14customerUserId11environmentySS_SbSSSgAA03LogN0OAkA0aB11EnvironmentOSgtF",
+            "mangledName": "$s24SignalSealAttributionSDK0abD0C9configure6apiKey7isDebug15endpointBaseUrl8logLevel14customerUserId11environmentySS_SbSSSgAA03LogN0OAkA0aB11EnvironmentOSgtF",
             "moduleName": "SignalSealAttributionSDK",
             "declAttributes": [
               "Final",
@@ -4439,14 +4712,14 @@
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Components.swift",
       "kind": "BooleanLiteral",
-      "offset": 631,
+      "offset": 923,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Components.swift",
       "kind": "IntegerLiteral",
-      "offset": 1882,
+      "offset": 2174,
       "length": 1,
       "value": "0"
     },
@@ -4454,244 +4727,244 @@
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 253,
-      "length": 8,
-      "value": "\"0.0.14\""
+      "length": 7,
+      "value": "\"0.2.0\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 369,
+      "offset": 368,
       "length": 5,
       "value": "\"ios\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 628,
+      "offset": 627,
       "length": 43,
       "value": "\"https:\/\/events.api.signalseal.net\/v1\/ios\/\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 799,
+      "offset": 798,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 804,
+      "offset": 803,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 1163,
+      "offset": 1162,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 1335,
+      "offset": 1334,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 1339,
+      "offset": 1338,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 1344,
+      "offset": 1343,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 1509,
+      "offset": 1508,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 1680,
+      "offset": 1679,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 1795,
+      "offset": 1794,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 1906,
+      "offset": 1905,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 2036,
+      "offset": 2035,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 2040,
+      "offset": 2039,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 2216,
+      "offset": 2215,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 2401,
+      "offset": 2400,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 2676,
+      "offset": 2675,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 2681,
+      "offset": 2680,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 2686,
+      "offset": 2685,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2962,
+      "offset": 2961,
       "length": 26,
       "value": "\"net.signalseal.sdk.flush\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3085,
+      "offset": 3084,
       "length": 18,
       "value": "\"SignalSealApiKey\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3136,
+      "offset": 3135,
       "length": 14,
       "value": "\"SignalSealId\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3181,
+      "offset": 3180,
       "length": 24,
       "value": "\"SignalSealFirstRunDate\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3240,
+      "offset": 3239,
       "length": 28,
       "value": "\"SignalSealInstallEventSent\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3295,
+      "offset": 3294,
       "length": 20,
       "value": "\"SignalSealASAToken\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3351,
+      "offset": 3350,
       "length": 42,
       "value": "\"SignalSealLastServerConfigFetchTimestamp\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3433,
+      "offset": 3432,
       "length": 33,
       "value": "\"SignalSealMatchRequestAttempted\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3493,
+      "offset": 3492,
       "length": 20,
       "value": "\"SignalSealUserData\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3542,
+      "offset": 3541,
       "length": 22,
       "value": "\"SignalSealEventQueue\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3597,
+      "offset": 3596,
       "length": 26,
       "value": "\"SignalSealCustomerUserId\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3661,
+      "offset": 3660,
       "length": 31,
       "value": "\"SignalSealInstallDateOverride\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3722,
+      "offset": 3721,
       "length": 23,
       "value": "\"SignalSealSdkDisabled\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3776,
+      "offset": 3775,
       "length": 24,
       "value": "\"SignalSealRemoteConfig\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 3833,
+      "offset": 3832,
       "length": 26,
       "value": "\"SignalSealThrottleWindow\""
     },
@@ -5139,14 +5412,14 @@
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 25282,
+      "offset": 25379,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/SignalSealSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 33755,
+      "offset": 33852,
       "length": 5,
       "value": "false"
     },
@@ -5181,35 +5454,35 @@
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1962,
+      "offset": 2209,
       "length": 8,
       "value": "\"app_id\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2001,
+      "offset": 2248,
       "length": 17,
       "value": "\"installation_id\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2049,
+      "offset": 2296,
       "length": 18,
       "value": "\"customer_user_id\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2094,
+      "offset": 2341,
       "length": 13,
       "value": "\"sdk_version\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Events\/TrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2168,
+      "offset": 2415,
       "length": 11,
       "value": "\"asa_token\""
     },

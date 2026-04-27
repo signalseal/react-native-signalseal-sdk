@@ -88,10 +88,16 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
             // phantom `CUSTOM` event without a name.
             return
         }
+        // `ReadableMap.toHashMap()` types values as `Any?`; the SDK
+        // takes `Map<String, Any>?`. Filter the nulls (cast is then
+        // safe) to match iOS, where the JSON-null → `nil` mapping
+        // simply omits the key.
+        @Suppress("UNCHECKED_CAST")
+        val params = parameters?.toHashMap()?.filterValues { it != null } as Map<String, Any>?
         SignalSealSDK.sendEvent(
             event = type,
             name = name,
-            parameters = parameters?.toHashMap(),
+            parameters = params,
         )
     }
 

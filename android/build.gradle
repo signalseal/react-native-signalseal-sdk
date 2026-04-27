@@ -87,18 +87,14 @@ dependencies {
     // its node_modules/react-native/android artifact.
     implementation 'com.facebook.react:react-native:+'
 
-    // SignalSeal Android SDK — public coordinate. Use `api` so the
-    // host app's classpath sees the SDK types (useful if they want
-    // direct access to EventType, LogLevel, etc. alongside the bridge).
+    // SignalSeal Android SDK — public Maven Central coordinate. Use `api`
+    // so the host app's classpath sees the SDK types (useful if they want
+    // direct access to EventType, LogLevel, SignalSealEnvironment, etc.
+    // alongside the bridge).
     //
-    // TODO(ship): this coordinate is NOT YET PUBLISHED to Maven
-    // Central. Until it is, bring the SDK in through one of:
-    //   1) `includeBuild("../android")` composite build in the host
-    //      app's settings.gradle (recommended for monorepo dev);
-    //   2) `./gradlew :sdk:publishToMavenLocal` from sdks/android,
-    //      then add `mavenLocal()` to this module's repositories;
-    //   3) A direct `api(project(":sdk"))` substitution when the RN
-    //      bridge is built inside the monorepo alongside the Android
-    //      SDK (used by the internal example app).
-    api 'io.github.signalseal:signalseal-android-sdk:0.0.13'
+    // Keep this version in lockstep with `package.json#version` of this
+    // RN package — the bridge code references native types that may not
+    // exist in older SDK versions (e.g., `SignalSealEnvironment` was
+    // added in 0.2.0).
+    api 'io.github.signalseal:signalseal-android-sdk:0.2.0'
 }

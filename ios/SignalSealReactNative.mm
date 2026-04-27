@@ -42,9 +42,16 @@ RCT_EXPORT_METHOD(configure:(NSDictionary *)args)
   [[SignalSealBridge shared] configureWithArgs:args];
 }
 
+// Param nullability deliberately omitted: the codegen-generated
+// `<NativeSignalSealSpec>` protocol declares these inside its own
+// `NS_ASSUME_NONNULL_BEGIN` block, so explicit `_Nullable` here would
+// conflict at compile time. The RCT bridge converts JS undefined to
+// nil and the Swift bridge takes `String?` / `NSDictionary?`, so nil
+// at runtime is handled correctly even though the static signature
+// reads as nonnull.
 RCT_EXPORT_METHOD(sendEvent:(NSString *)eventType
-                  name:(NSString * _Nullable)name
-                  parameters:(NSDictionary * _Nullable)parameters)
+                  name:(NSString *)name
+                  parameters:(NSDictionary *)parameters)
 {
   [[SignalSealBridge shared] sendEventWithType:eventType name:name parameters:parameters];
 }

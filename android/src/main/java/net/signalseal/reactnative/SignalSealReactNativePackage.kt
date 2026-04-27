@@ -1,35 +1,42 @@
 package net.signalseal.reactnative
 
-import com.facebook.react.ReactPackage
+import com.facebook.react.BaseReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
-import com.facebook.react.uimanager.ViewManager
+import com.facebook.react.module.model.ReactModuleInfo
+import com.facebook.react.module.model.ReactModuleInfoProvider
 
 /**
- * React Native package registration. Autolinked in the host app via
- * `react-native.config.js`:
+ * React Native package registration. Autolinking on RN >= 0.71 picks
+ * this up by scanning `node_modules/<pkg>/android` for a class extending
+ * `BaseReactPackage`; no `react-native.config.js` shim required.
  *
- *     dependency: {
- *       platforms: {
- *         android: {
- *           packageImportPath: 'import net.signalseal.reactnative.SignalSealReactNativePackage;',
- *           packageInstance: 'new SignalSealReactNativePackage()',
- *         },
- *       },
- *     }
- *
- * Required when the consumer app runs on the legacy Android
- * architecture. New-arch apps using autolinking + codegen don't strictly
- * need this (the TurboModule registry would wire things directly), but
- * shipping it keeps both paths working off a single build.
+ * `BaseReactPackage` is the new-arch-aware replacement for the legacy
+ * `ReactPackage` interface. It satisfies both code paths:
+ *   - Old arch: `getModule(name)` returns the bridge module on demand.
+ *   - New arch: `getReactModuleInfoProvider()` advertises the module as
+ *     `isTurboModule = true` so the TurboModuleRegistry knows to spin
+ *     it up via the codegen-generated JSI plumbing.
  */
-class SignalSealReactNativePackage : ReactPackage {
+class SignalSealReactNativePackage : BaseReactPackage() {
 
-    override fun createNativeModules(
-        reactContext: ReactApplicationContext,
-    ): List<NativeModule> = listOf(SignalSealReactNativeModule(reactContext))
+    override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? =
+        if (name == SignalSealReactNativeModule.NAME) {
+            SignalSealReactNativeModule(reactContext)
+        } else {
+            null
+        }
 
-    override fun createViewManagers(
-        reactContext: ReactApplicationContext,
-    ): List<ViewManager<*, *>> = emptyList()
+    override fun getReactModuleInfoProvider() = ReactModuleInfoProvider {
+        mapOf(
+            SignalSealReactNativeModule.NAME to ReactModuleInfo(
+                /* name */ SignalSealReactNativeModule.NAME,
+                /* className */ SignalSealReactNativeModule::class.java.name,
+                /* canOverrideExistingModule */ false,
+                /* needsEagerInit */ false,
+                /* isCxxModule */ false,
+                /* isTurboModule */ true,
+            ),
+        )
+    }
 }

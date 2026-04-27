@@ -37,3 +37,6 @@ Thumbs.db
 # Logs
 logs/
 *.log
+
+# Tooling caches
+.context/

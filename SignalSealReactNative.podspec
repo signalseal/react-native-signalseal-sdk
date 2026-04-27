@@ -35,5 +35,21 @@ Pod::Spec.new do |s|
     "CLANG_CXX_LANGUAGE_STANDARD" => "c++17",
   }
 
-  s.dependency "React-Core"
+  # New architecture wiring. `install_modules_dependencies` is the
+  # canonical helper from react_native_pods.rb (loaded by the host
+  # app's Podfile). It sets up:
+  #   - React-Codegen + the generated `NativeSignalSealSpec` headers
+  #   - ReactCommon, RCTRequired, RCTTypeSafety, ReactCommon/turbomodule
+  #   - C++17 + folly compile flags
+  #   - Conditional new-arch DEFINES based on `RCT_NEW_ARCH_ENABLED`
+  #
+  # The `respond_to?` guard isn't strictly needed at our peerDep floor
+  # (RN >= 0.74), but it keeps the podspec parseable in older toolchains
+  # where this helper isn't loaded yet — falls back to a plain
+  # `React-Core` dep, matching the v0.0.x behaviour.
+  if respond_to?(:install_modules_dependencies, true)
+    install_modules_dependencies(s)
+  else
+    s.dependency "React-Core"
+  end
 end

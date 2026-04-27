@@ -18,6 +18,11 @@ buildscript {
 
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+// React Native Gradle Plugin: drives codegen for our `codegenConfig` block
+// in package.json. Without this, host apps on the new architecture fail at
+// CMake configure with `add_subdirectory ... codegen/jni/ ... not an
+// existing directory` because nothing produced the JNI sources.
+apply plugin: 'com.facebook.react'
 
 android {
     namespace 'net.signalseal.reactnative'
@@ -26,6 +31,15 @@ android {
     defaultConfig {
         minSdk 21
         // No targetSdk on a library module — the host app sets it.
+
+        // Surface new-arch state as a BuildConfig flag for any conditional
+        // glue we may need later. RNGP injects the system property when
+        // the host enables new arch.
+        buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", String.valueOf(System.getProperty("newArchEnabled") == "true")
+    }
+
+    buildFeatures {
+        buildConfig true
     }
 
     compileOptions {
@@ -39,10 +53,25 @@ android {
 
     sourceSets {
         main {
-            java.srcDirs = ['src/main/java']
+            // Pick up the codegen-generated sources alongside our hand-written
+            // Kotlin. The `react` block below points codegen at `../src/`
+            // (the TS specs); RNGP writes the generated abstract `Spec` base
+            // class into `build/generated/source/codegen/java`.
+            java.srcDirs += [
+                'src/main/java',
+                "${project.buildDir}/generated/source/codegen/java",
+            ]
             manifest.srcFile 'src/main/AndroidManifest.xml'
         }
     }
+}
+
+react {
+    // The codegen `name` from package.json. RNGP uses this for the generated
+    // abstract class (`NativeSignalSealSpec`) and JNI library symbols.
+    libraryName = "signalsealReactNative"
+    codegenJavaPackageName = "net.signalseal.reactnative"
+    jsRootDir = file("../src/")
 }
 
 repositories {

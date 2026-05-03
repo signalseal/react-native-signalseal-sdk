@@ -52,6 +52,11 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
         val customerUserId = args.getStringSafe("customerUserId")
         val logLevel = mapLogLevel(args.getStringSafe("logLevel"))
         val environment = mapEnvironment(args.getStringSafe("environment"))
+        val respectLimitAdTracking = if (args.hasKey("respectLimitAdTracking") && !args.isNull("respectLimitAdTracking")) {
+            args.getBoolean("respectLimitAdTracking")
+        } else {
+            true
+        }
 
         // The Android SDK requires a non-null `endpointBaseUrl` at the
         // Kotlin-level overload; when unset we fall back to the SDK's
@@ -67,6 +72,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
                 logLevel = logLevel,
                 customerUserId = customerUserId,
                 environment = environment,
+                respectLimitAdTracking = respectLimitAdTracking,
             )
         } else {
             SignalSealSDK.configure(
@@ -76,6 +82,7 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
                 logLevel = logLevel,
                 customerUserId = customerUserId,
                 environment = environment,
+                respectLimitAdTracking = respectLimitAdTracking,
             )
         }
     }

@@ -112,6 +112,7 @@ export const SignalSealSDK = {
       logLevel?: string;
       customerUserId?: string;
       environment?: string;
+      respectLimitAdTracking?: boolean;
     } = { apiKey: args.apiKey };
     if (args.isDebug !== undefined) payload.isDebug = !!args.isDebug;
     if (args.endpointBaseUrl !== undefined) payload.endpointBaseUrl = args.endpointBaseUrl;
@@ -120,6 +121,9 @@ export const SignalSealSDK = {
       payload.customerUserId = String(args.customerUserId);
     }
     if (args.environment !== undefined) payload.environment = args.environment;
+    if (args.respectLimitAdTracking !== undefined) {
+      payload.respectLimitAdTracking = !!args.respectLimitAdTracking;
+    }
 
     NativeSignalSeal.configure(payload);
   },

@@ -46,6 +46,10 @@ public final class SignalSealBridge: NSObject {
         let customerUserId = args["customerUserId"] as? String
         let level = mapLogLevel(args["logLevel"] as? String)
         let environment = mapEnvironment(args["environment"] as? String)
+        // `respectLimitAdTracking` is intentionally not extracted: it is
+        // Android-only. ATT is OS-enforced on iOS, so there is no LAT
+        // gate the SDK could honor or bypass.
+        _ = args["respectLimitAdTracking"]
 
         SignalSealSDK.shared.configure(
             apiKey: apiKey,

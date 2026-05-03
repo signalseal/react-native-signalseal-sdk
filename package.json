@@ -1,6 +1,6 @@
 {
   "name": "@signalseal/react-native",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "SignalSeal React Native bridge — thin marshalling layer over the native iOS and Android SDKs.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

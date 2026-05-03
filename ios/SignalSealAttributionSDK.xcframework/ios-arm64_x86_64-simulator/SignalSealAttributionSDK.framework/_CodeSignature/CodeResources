@@ -14,11 +14,11 @@
 		</data>
 		<key>Modules/SignalSealAttributionSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		dTOeILRcBSncWvs548/n2rdBUq8=
+		nw13XAIx7bBqI5NklDQbvNiz9F4=
 		</data>
 		<key>Modules/SignalSealAttributionSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		gZhzvv9gwWnHNV8fN0NcX6MDuvs=
+		2Nt52FzO1J2kClx6NNOePU3YMP4=
 		</data>
 		<key>Modules/SignalSealAttributionSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,19 +26,19 @@
 		</data>
 		<key>Modules/SignalSealAttributionSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		gZhzvv9gwWnHNV8fN0NcX6MDuvs=
+		2Nt52FzO1J2kClx6NNOePU3YMP4=
 		</data>
 		<key>Modules/SignalSealAttributionSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		gQokWhtjexp3nuCtmL6NA7fqsvg=
+		30siHT4Jg+IaJnXDJFcEgqHOT08=
 		</data>
 		<key>Modules/SignalSealAttributionSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		dTOeILRcBSncWvs548/n2rdBUq8=
+		nw13XAIx7bBqI5NklDQbvNiz9F4=
 		</data>
 		<key>Modules/SignalSealAttributionSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		sM/mxeKZRIn7nZEP35go57vn05c=
+		wtlx0e2zduf6faYy1SM/ZHAaxAA=
 		</data>
 		<key>Modules/SignalSealAttributionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Modules/SignalSealAttributionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		sM/mxeKZRIn7nZEP35go57vn05c=
+		wtlx0e2zduf6faYy1SM/ZHAaxAA=
 		</data>
 		<key>Modules/SignalSealAttributionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		2iUVujzJ8RtH+qT0vux5+V61EuE=
+		BWLV8cFfvEb68uXoi8QIhCz8+pw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -70,14 +70,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			h0xjY+SecoSkf0MXq1d0z4gjZaKoLOoJ5M31OA5YTso=
+			uw8pWYVOqYU2s9el9EOK4YQH1WRDx71fLnMVESxDlUs=
 			</data>
 		</dict>
 		<key>Modules/SignalSealAttributionSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fIkAaWdyyUn6w+2np4rSU7bPWp++9y/Ue21DPkCmsgc=
+			Na1tCd+ovETBar6DFaumtCTfNgWOhQwgPdxmmLmB5nw=
 			</data>
 		</dict>
 		<key>Modules/SignalSealAttributionSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -91,28 +91,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fIkAaWdyyUn6w+2np4rSU7bPWp++9y/Ue21DPkCmsgc=
+			Na1tCd+ovETBar6DFaumtCTfNgWOhQwgPdxmmLmB5nw=
 			</data>
 		</dict>
 		<key>Modules/SignalSealAttributionSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			21YKVASsi4SOE8pwbOfcPNWs78o18OMq9UPidcGk9W0=
+			YXJmiTBDyHRL4w1vnZ/oJQY3PLW923BEbNNmYk1e+Gw=
 			</data>
 		</dict>
 		<key>Modules/SignalSealAttributionSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			h0xjY+SecoSkf0MXq1d0z4gjZaKoLOoJ5M31OA5YTso=
+			uw8pWYVOqYU2s9el9EOK4YQH1WRDx71fLnMVESxDlUs=
 			</data>
 		</dict>
 		<key>Modules/SignalSealAttributionSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aXbHeXRQKVg7Z5a1AGoQ47IxXefIRM3ux/0w8a+MVVw=
+			edyQBd/foPXbPDADl30I3FsCAZXIFTrSJBoMfVowtYo=
 			</data>
 		</dict>
 		<key>Modules/SignalSealAttributionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -126,14 +126,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aXbHeXRQKVg7Z5a1AGoQ47IxXefIRM3ux/0w8a+MVVw=
+			edyQBd/foPXbPDADl30I3FsCAZXIFTrSJBoMfVowtYo=
 			</data>
 		</dict>
 		<key>Modules/SignalSealAttributionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AX797XScPp/eJbUYzxCIvcaL5enmlVDfKvUDiMiBaBI=
+			TevU9a9iGTlvawN+IY7BoJxV0bImYOnJmEsTHIPEZrc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

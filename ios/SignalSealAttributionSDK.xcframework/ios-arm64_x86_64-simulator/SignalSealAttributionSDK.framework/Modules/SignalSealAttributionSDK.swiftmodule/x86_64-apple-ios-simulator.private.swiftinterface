@@ -49,6 +49,7 @@ public enum EventType : Swift.String, Swift.CaseIterable, Swift.Sendable {
   case viewItem
   case viewContent
   case share
+  case asaAttribution
   case custom
   public init?(rawValue: Swift.String)
   public typealias AllCases = [SignalSealAttributionSDK.EventType]

@@ -70,6 +70,18 @@ export interface ConfigureArgs {
    * pass this explicitly.
    */
   environment?: Environment;
+  /**
+   * Android-only. When `true` (default), the SDK suppresses the AAID
+   * whenever the user has Limit Ad Tracking enabled. Setting this to
+   * `false` causes the SDK to transmit the AAID regardless of LAT.
+   *
+   * Bypassing LAT violates the Google Play Developer Program Policies
+   * for the `AD_ID` permission — opt out only with legal basis.
+   *
+   * Ignored on iOS (Apple's ATT gate is OS-enforced; the SDK has no
+   * ability to bypass it).
+   */
+  respectLimitAdTracking?: boolean;
 }
 
 /**

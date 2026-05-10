@@ -61,6 +61,14 @@ RCT_EXPORT_METHOD(setUserAttributes:(NSDictionary *)attrs)
   [[SignalSealBridge shared] setUserAttributesWithAttrs:attrs];
 }
 
+// `value` arrives as nil for JS `null` and as an NSString for any string.
+// Swift bridge accepts NSString? and forwards to the native SDK, which
+// treats nil/empty as a clear-the-manual-override request.
+RCT_EXPORT_METHOD(setMetaAnonymousId:(NSString *)value)
+{
+  [[SignalSealBridge shared] setMetaAnonymousIdWithValue:value];
+}
+
 RCT_EXPORT_METHOD(enableAppleAdsAttribution)
 {
   [[SignalSealBridge shared] enableAppleAdsAttribution];

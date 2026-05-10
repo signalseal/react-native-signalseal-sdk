@@ -108,6 +108,13 @@ class SignalSealReactNativeModule(reactContext: ReactApplicationContext) :
         )
     }
 
+    override fun setMetaAnonymousId(value: String?) {
+        // Native SDK accepts null/empty to clear a prior manual override
+        // and fall back to auto-detect. The TS facade already coerces
+        // unset → null, but stay defensive for direct NativeModules calls.
+        SignalSealSDK.setMetaAnonymousId(value)
+    }
+
     override fun setUserAttributes(attrs: ReadableMap) {
         // The TS facade writes snake_case keys; reconstruct the typed
         // `UserAttributes` data class from them. Extras are ignored.

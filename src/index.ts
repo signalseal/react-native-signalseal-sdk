@@ -180,6 +180,33 @@ export const SignalSealSDK = {
   },
 
   /**
+   * Manually set Meta SDK's anonymous app-device GUID. Forwarded to the
+   * server as `device.fb_anon_id` on the next `/event` batch and used by
+   * Meta CAPI as `user_data.anon_id`, which is how server-side CAPI
+   * events dedupe against client-side events the Meta SDK already logged
+   * on the device.
+   *
+   * In most cases you do NOT need to call this — both native SDKs
+   * auto-detect the value from the Meta SDK (KVC on iOS, reflection +
+   * SharedPreferences on Android). Use this when:
+   *   - Auto-detect can't see the value (multi-process apps, non-standard
+   *     UserDefaults suite, etc.).
+   *   - You want to override what auto-detect resolved.
+   *
+   * Pass `null` or an empty string to clear a prior manual override and
+   * fall back to auto-detect.
+   */
+  setMetaAnonymousId(value: string | null): void {
+    if (value !== null && typeof value !== 'string') {
+      throw new SignalSealError(
+        'CONFIGURE_FAILED',
+        `setMetaAnonymousId expects a string or null (got ${typeof value})`,
+      );
+    }
+    NativeSignalSeal.setMetaAnonymousId(value);
+  },
+
+  /**
    * Force-flush the in-memory event queue. Resolves once the native
    * queue has been drained (iOS) / scheduled for drain (Android).
    */

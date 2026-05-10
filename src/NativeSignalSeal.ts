@@ -40,6 +40,7 @@ export interface Spec extends TurboModule {
 
   sendEvent(eventType: string, name?: string, parameters?: { [key: string]: unknown }): void;
   setUserAttributes(attrs: { [key: string]: unknown }): void;
+  setMetaAnonymousId(value: string | null): void;
   flush(): Promise<void>;
   resetData(): void;
   getSignalSealId(): Promise<string | null>;

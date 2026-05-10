@@ -93,6 +93,14 @@ public final class SignalSealBridge: NSObject {
         SignalSealSDK.shared.sendEvent(event: eventType, name: name, parameters: params)
     }
 
+    /// Manually set Meta SDK's anonymous app-device GUID. The native SDK
+    /// treats nil / empty as "clear the manual override and fall back to
+    /// auto-detect". The TS facade only ever sends `null` or a non-empty
+    /// string, but the bridge guards both paths anyway.
+    @objc public func setMetaAnonymousId(value: NSString?) {
+        SignalSealSDK.shared.setMetaAnonymousId(value as String?)
+    }
+
     @objc public func setUserAttributes(attrs: NSDictionary) {
         // The TS facade already rewrote to snake_case. We reconstruct
         // the Swift `UserAttributes` struct by pulling the expected

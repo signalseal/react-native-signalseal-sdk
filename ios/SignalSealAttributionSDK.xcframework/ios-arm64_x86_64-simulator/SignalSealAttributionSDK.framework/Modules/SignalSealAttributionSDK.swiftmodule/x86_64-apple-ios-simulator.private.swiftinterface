@@ -7,6 +7,7 @@ import AdSupport
 import AppTrackingTransparency
 import Darwin
 import Foundation
+import ObjectiveC
 import StoreKit
 import Swift
 import UIKit
@@ -15,6 +16,7 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os
+import ObjectiveC.runtime
 public struct AnyCodable : Swift.Codable, @unchecked Swift.Sendable {
   public let value: Any
   public init(_ value: Any)

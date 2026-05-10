@@ -1582,6 +1582,13 @@
       },
       {
         "kind": "Import",
+        "name": "ObjectiveC.runtime",
+        "printedName": "ObjectiveC.runtime",
+        "declKind": "Import",
+        "moduleName": "SignalSealAttributionSDK"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -4829,7 +4836,7 @@
       "kind": "StringLiteral",
       "offset": 253,
       "length": 7,
-      "value": "\"0.2.6\""
+      "value": "\"0.2.7\""
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Constants.swift",
@@ -5253,15 +5260,8 @@
     },
     {
       "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Device\/FbAnonIdProvider.swift",
-      "kind": "BooleanLiteral",
-      "offset": 925,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/simonmaribo\/Documents\/fulcra\/signalseal-sdks\/ios-signalseal-core-sdk\/Sources\/SignalSealAttributionSDK\/Internal\/Device\/FbAnonIdProvider.swift",
       "kind": "StringLiteral",
-      "offset": 3397,
+      "offset": 4296,
       "length": 39,
       "value": "\"com.facebook.sdk.appEventsAnonymousId\""
     },
